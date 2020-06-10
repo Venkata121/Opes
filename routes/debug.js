@@ -2,7 +2,7 @@ var express = require("express");
 var secured = require("../lib/middleware/secured");
 var router = express.Router();
 
-/* GET user profile. */
+/* GET debug page. */
 router.get("/debug", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
   res.render("debug", {
