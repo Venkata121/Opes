@@ -46,8 +46,7 @@ pre {
 .name {
   color: white;
   font-family: "Inter", sans-serif;
-  margin: 15px;
-  margin-bottom: 0px;
+  text-align: center;
 }
 
 .icon a:hover {
