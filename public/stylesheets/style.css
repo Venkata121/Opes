@@ -19,34 +19,47 @@ pre {
   font-family: "Inter", sans-serif;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #333;
-  overflow: hidden;
+/* Style the navigation menu */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
   font-family: "Inter", sans-serif;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: initial;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
+/* Navigation links */
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
   text-decoration: none;
   font-size: 17px;
+  width: 25%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
+  text-align: center; /* If you want the text to be centered */
   font-family: "Inter", sans-serif;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* Add a background color on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+/* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left; /* If you want the text to be left-aligned on small screens */
+    font-family: "Inter", sans-serif;
+  }
 }
 
 .name {
   color: white;
   font-family: "Inter", sans-serif;
-  margin: 20px;
+  text-align: center;
 }
 
 .icon a:hover {

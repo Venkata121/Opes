@@ -10,17 +10,19 @@ html
   body
     include resources
     include pricing
-    .topnav.center( role="navigation" )
-      h1.topnav.name Sarthak Mohanty
-      a(href="/") Home
-      a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
+    .navbar( role="navigation" )
       if locals.user
+        h1.navbar.name Sarthak Mohanty
+        a(href="/") Home
+        a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
         a(href="/user" id="profileDropDown") Profile
         a(id="qsLogoutBtn" href="/logout") Log Out
         a.icon
           i.fa.fa-unlock
       else
-        a(href="/pricing") Pricing
+        h1.navbar.name Sarthak Mohanty
+        a(href="/") Home
+        a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
         a(id="qsLoginBtn" href="/login") Log In
         a.icon
           i.fa.fa-lock
