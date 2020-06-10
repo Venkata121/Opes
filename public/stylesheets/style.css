@@ -54,3 +54,7 @@ color: white;
 font-family: 'Inter', sans-serif;
 margin: 20px;
 }
+
+h1 h2 h3 h4 h5 {
+    font-family: 'Inter', sans-serif;
+}
