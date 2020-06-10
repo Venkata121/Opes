@@ -7,6 +7,7 @@ html
     link(rel='shortcut icon', href='https://sarthakmohanty.me/android-chrome-512x512.png')
     link(href='https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap', rel='stylesheet')
   body
+    include mixins
     .topnav( role="navigation" )
       h1.topnav.name Sarthak Mohanty
       a(href="/").navButton Home
@@ -17,5 +18,4 @@ html
       else
         a(href="/pricing").navButton Pricing
         a(id="qsLoginBtn" href="/login").navButton Log In
-        
     block content
