@@ -1,11 +1,8 @@
 extends layout
 
-block links
-  link(rel='stylesheet', href='/stylesheets/style.css')
-
 block content
   .w3-container
     if locals.user
-      h4 You are logged in!
+      block toc
     else
       h4 You are not logged in! Please #[a(href="/login") Log In] to continue.
