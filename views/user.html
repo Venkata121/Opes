@@ -1,0 +1,32 @@
+extends layout
+
+link(rel='stylesheet', href='/stylesheets/style.css')
+
+block content
+  .w3-card-4
+    .profile
+      h1 Welcome, #{user.displayName}!
+      img(src="https://api.adorable.io/avatars/119/sarthaktexas.png")
+    h2 User profile
+    p This is the content of <code>req.user</code>.
+    p Note: <code>_raw</code> and <code>_json</code> properties have been ommited.
+    pre
+      code #{userProfile}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="shortcut icon" href="https://sarthakmohanty.me/android-chrome-512x512.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="topnav" role="navigation">
+        <h1 class="topnav name">Sarthak Mohanty</h1><a class="navButton" href="/">Home</a><a href="https://sarthakmohanty.me/contact" target="_blank">Contact Me</a><a id="qsLoginBtn" href="/login">Log In</a></div>
+</body>
+
+</html>
