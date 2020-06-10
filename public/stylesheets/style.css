@@ -1,29 +1,29 @@
 .w3-container a {
-    color: #337ab7;
-    text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  color: #337ab7;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
 }
 
 pre {
-    text-align: left;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #343f5f;
-    color: #fdfeff;
-    overflow: scroll;
-    border: 1px #929090 solid;
-    padding: 15px
+  text-align: left;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #343f5f;
+  color: #fdfeff;
+  overflow: scroll;
+  border: 1px #929090 solid;
+  padding: 15px;
 }
 
 .w3-card-4 {
-    padding: 15px;
-  font-family: 'Inter', sans-serif;
+  padding: 15px;
+  font-family: "Inter", sans-serif;
 }
 
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #333;
   overflow: hidden;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Style the links inside the navigation bar */
@@ -34,7 +34,7 @@ pre {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Change the color of links on hover */
@@ -50,11 +50,11 @@ pre {
 }
 
 .name {
-color: white;
-font-family: 'Inter', sans-serif;
-margin: 20px;
+  color: white;
+  font-family: "Inter", sans-serif;
+  margin: 20px;
 }
 
-h1 h2 h3 h4 h5 {
-    font-family: 'Inter', sans-serif;
+h1 h2 h3 h4 h5 h6 {
+  font-family: "Inter", sans-serif;
 }
