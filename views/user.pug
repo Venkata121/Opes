@@ -2,13 +2,15 @@ extends layout
 
 block links
   link(rel='stylesheet', href='/stylesheets/style.css')
+  script(rel='script', href='/scripts/konami.js')
 
 block content
   .w3-card-4
     .profile
       h1 Welcome, #{user.displayName}!
-      img(src="https://api.adorable.io/avatars/119/sarthaktexas.png")
+      img(src=user.picture)
     h2 User profile
+  .konami
     p This is the content of <code>req.user</code>.
     p Note: <code>_raw</code> and <code>_json</code> properties have been ommited.
     pre
