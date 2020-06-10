@@ -1,9 +1,12 @@
 extends layout
 
+link(rel='stylesheet', href='/stylesheets/style.css')
+
 block content
   .w3-card-4
-    h1 Welcome, #{user.displayName}!
-    img(src="https://api.adorable.io/avatars/285/{user.nickname}.png")
+    .profile
+      h1 Welcome, #{user.displayName}!
+      img(src="https://api.adorable.io/avatars/119/sarthaktexas.png")
     h2 User profile
     p This is the content of <code>req.user</code>.
     p Note: <code>_raw</code> and <code>_json</code> properties have been ommited.
