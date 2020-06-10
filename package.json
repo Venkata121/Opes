@@ -1,11 +1,12 @@
 {
-  "name": "Sarthak\'s Website'",
+  "name": "sarthak-website'",
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "aws-sdk": "^2.693.0",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.5",
     "debug": "~4.1.1",
