@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-container
     if locals.user
       +resources
