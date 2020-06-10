@@ -3,6 +3,7 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
     link(rel='shortcut icon', href='https://sarthakmohanty.me/android-chrome-512x512.png')
     link(href='https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap', rel='stylesheet')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
@@ -16,11 +17,9 @@ html
         a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
         a(href="/user" id="profileDropDown") Profile
         a(id="qsLogoutBtn" href="/logout") Log Out
-        i.fa.fa-unlock
       else
         h1.topnav.name Sarthak Mohanty
         a(href="/") Home
         a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
         a(id="qsLoginBtn" href="/login") Log In
-        i.fa.fa-lock
     block content
