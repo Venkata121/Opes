@@ -8,7 +8,32 @@ router.get("/user", secured(), function(req, res, next) {
   res.render("user", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Profile Page",
-    subjects: ["psychology", "biology", "whap"]
+    subjects: [
+      "ArtHistory",
+      "Biology",
+      "CalcBC",
+      "Chemistry",
+      "CompGov",
+      "CompSci",
+      "CompSciA",
+      "EnglishLang",
+      "EnglishLit",
+      "EnvSci",
+      "Euro",
+      "HumanGeo",
+      "Macro",
+      "Micro",
+      "MusicTheory",
+      "Physics1",
+      "Physics2",
+      "PhysicsCEM",
+      "PhysicsCMech",
+      "Psychology",
+      "Statistics",
+      "USGov",
+      "USHistory",
+      "WorldHistory"
+    ]
   });
 });
 
