@@ -11,8 +11,6 @@ var userInViews = require("./lib/middleware/userInViews");
 var authRouter = require("./routes/auth");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var debugRouter = require("./routes/debug");
-var resourcesRouter = require("./routes/resources");
 
 dotenv.config();
 
@@ -97,8 +95,6 @@ app.use(userInViews());
 app.use("/", authRouter);
 app.use("/", indexRouter);
 app.use("/", usersRouter);
-app.use("/", debugRouter);
-app.use("/", resourcesRouter);
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
