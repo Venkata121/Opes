@@ -4,8 +4,8 @@ block content
   .w3-card-4
     h1 Welcome, #{user.displayName}!
     img(src=user.picture)
-    each subject in subjects {
-      if user.subject === subject {
+    each subject in subjects
+      if user.subject === subject || user.subject === true
         p subject
-      }
-    }
+      else
+        p hi
