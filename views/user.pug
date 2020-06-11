@@ -5,7 +5,4 @@ block content
     h1 Welcome, #{user.displayName}!
     img(src=user.picture)
     each subject in subjects
-      if user.subjects.psychology === true
-        p you have access to psychology!
-      else
-        p you don't have access to #{subject}
+      p= subject
