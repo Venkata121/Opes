@@ -7,13 +7,13 @@ html
     link(href='https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap', rel='stylesheet')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   body
-    include resources
+    include resourcesnormal
     include resourcessecured
     include pricing
     .topnav( role="navigation" style="background-color: user.color_preference;")
       if locals.user
         h1.topnav.name Sarthak Mohanty
-        a(href="/") Home
+        a(href="/resources") Resources
         a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
         a(href="/user" id="profileDropDown") Profile
         a(id="qsLogoutBtn" href="/logout") Log Out

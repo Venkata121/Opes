@@ -1,2 +1,12 @@
-mixin resources
-  h3 hey you've been breached.
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  .w3-container
+    if locals.user
+      p You now have access!, but you shouldn't be seeing this page.
+    else
+      center
+        h2 You are not logged in! Please #[a(href="/login") Log In] to continue.
+        h4 If you do not have an account, consider getting one.
+        +pricing

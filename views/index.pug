@@ -4,7 +4,7 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-container
     if locals.user
-      You now have access!
+      p You now have access!, but you shouldn't be seeing this page.
     else
       center
         h2 You are not logged in! Please #[a(href="/login") Log In] to continue.
