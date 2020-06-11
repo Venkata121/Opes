@@ -6,6 +6,6 @@ block content
     img(src=user.picture)
     each subject in subjects
       if user.subject === subject || user.subject === true
-        p subject
+        p ${subject}
       else
         p hi
