@@ -1,14 +1,6 @@
 body {
   -webkit-font-smoothing: antialiased;
-}
-
-section {
-  background: black;
-  color: #7a90ff;
-  padding: 2em 0 8em;
-  min-height: 100vh;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
 }
 
 .pricing {
@@ -20,6 +12,7 @@ section {
   justify-content: center;
   width: 100%;
   margin: 0 auto 3em;
+  font-family: "Inter", sans-serif;
 }
 .pricing-item {
   position: relative;
@@ -32,22 +25,26 @@ section {
   text-align: center;
   -webkit-flex: 0 1 330px;
   flex: 0 1 330px;
+  font-family: "Inter", sans-serif;
 }
 .pricing-action {
   color: inherit;
   border: none;
   background: none;
+  font-family: "Inter", sans-serif;
 }
 .pricing-action:focus {
   outline: none;
+  font-family: "Inter", sans-serif;
 }
 
 .pricing-feature-list {
   text-align: left;
+  font-family: "Inter", sans-serif;
 }
 
 .pricing-palden .pricing-item {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: default;
   color: #84697c;
   background: #fff;
@@ -59,12 +56,14 @@ section {
 @media screen and (min-width: 66.25em) {
   .pricing-palden .pricing-item {
     margin: 1em -0.5em;
+    font-family: "Inter", sans-serif;
   }
 
   .pricing-palden .pricing__item--featured {
     margin: 0;
     z-index: 10;
     box-shadow: 0 0 20px rgba(46, 59, 125, 0.23);
+    font-family: "Inter", sans-serif;
   }
 }
 .pricing-palden .pricing-deco {
@@ -72,6 +71,7 @@ section {
   background: rgba(76, 70, 101, 0.99);
   padding: 4em 0 9em;
   position: relative;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-deco-img {
   position: absolute;
@@ -79,6 +79,7 @@ section {
   left: 0;
   width: 100%;
   height: 160px;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-title {
   font-size: 0.75em;
@@ -86,6 +87,7 @@ section {
   text-transform: uppercase;
   letter-spacing: 5px;
   color: #fff;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .deco-layer {
   -webkit-transition: -webkit-transform 0.5s;
@@ -94,13 +96,16 @@ section {
 .pricing-palden .pricing-item:hover .deco-layer--1 {
   -webkit-transform: translate3d(15px, 0, 0);
   transform: translate3d(15px, 0, 0);
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-item:hover .deco-layer--2 {
   -webkit-transform: translate3d(-15px, 0, 0);
   transform: translate3d(-15px, 0, 0);
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .icon {
   font-size: 2.5em;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-price {
   font-size: 5em;
@@ -109,29 +114,35 @@ section {
   color: #fff;
   margin: 0 0 0.25em 0;
   line-height: 0.75;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-currency {
   font-size: 0.15em;
   vertical-align: top;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-period {
   font-size: 0.15em;
   padding: 0 0 0 0.5em;
   font-style: italic;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing__sentence {
   font-weight: bold;
   margin: 0 0 1em 0;
   padding: 0 0 0.5em;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-feature-list {
   margin: 0;
   padding: 0.25em 0 2.5em;
   list-style: none;
   text-align: center;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-feature {
   padding: 1em 0;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-action {
   font-weight: bold;
@@ -142,12 +153,15 @@ section {
   background: #4d4766;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  font-family: "Inter", sans-serif;
 }
 .pricing-palden .pricing-action:hover,
 .pricing-palden .pricing-action:focus {
   background-color: #100a13;
+  font-family: "Inter", sans-serif;
 }
 
 .pricing-palden .pricing-item--featured .pricing-deco {
   padding: 5em 0 8.885em 0;
+  font-family: "Inter", sans-serif;
 }
