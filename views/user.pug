@@ -5,5 +5,5 @@ block content
     h1 Welcome, #{user.displayName}!
     img(src=user.picture)
     each subject in subjects
-      - var apcurl = "https://sarthakmohanty.me/apc/QB/${subject}"
-      a(href=apcurl) subject
+      a(href="https://sarthakmohanty.me/apc/QB/" + subject) subject
+      p subject
