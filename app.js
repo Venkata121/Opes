@@ -1,5 +1,5 @@
 var express = require("express");
-var * = require()'@sentry/node';
+var Sentry = require("@sentry/node");
 var path = require("path");
 var logger = require("morgan");
 var cookieParser = require("cookie-parser");
@@ -14,6 +14,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
 dotenv.config();
+Sentry.init({ dsn: 'https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967' });
 
 // Configure Passport to use Auth0
 var strategy = new Auth0Strategy(
@@ -97,11 +98,18 @@ app.use("/", authRouter);
 app.use("/", indexRouter);
 app.use("/", usersRouter);
 
+// The request handler must be the first middleware on the app
+app.use(Sentry.Handlers.requestHandler());
+
+app.use(Sentry.Handlers.errorHandler());
+
+
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
   const err = new Error("Not Found");
   err.status = 404;
   next(err);
+  res.end(res.sentry + "\n");
 });
 
 // Error handlers
@@ -115,6 +123,7 @@ if (app.get("env") === "development") {
       message: err.message,
       error: err
     });
+    res.end(res.sentry + "\n");
   });
 }
 
@@ -126,6 +135,7 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+  res.end(res.sentry + "\n");
 });
 
 module.exports = app;
