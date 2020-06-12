@@ -20,11 +20,11 @@ router.get("/debug", secured(), function(req, res, next) {
 
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
-  const { _raw, _json, ...userProfile } = req.user;
+  const { _raw, _json, userMetadata, ...userProfile } = req.user;
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
-    userMetadata: JSON.stringify(userP)
+    userMetadata: JSON.stringify(userMetadata, null, 2)
   });
 });
 
