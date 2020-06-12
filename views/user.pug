@@ -3,4 +3,5 @@ extends layout
 block content
   .w3-card-4
     h1 Welcome, #{user.displayName}!
+    h5 #{user.emails.value}
     img(src=user.picture)
