@@ -27,9 +27,4 @@ router.get("/resources", secured(), function(req, res, next) {
   });
 });
 
-router.get("/test/:body", secured(), function(req, res, next) {
-  const { _raw, _json, ...userProfile } = req.user;
-  res.render( 'test', { output: req.params.body });
-});
-
 module.exports = router;
