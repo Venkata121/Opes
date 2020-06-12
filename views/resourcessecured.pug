@@ -1,2 +1,4 @@
 mixin resourcessecured
-  h3 HEYYY YOU HAVEN'T BEEN BREACHED
+  each subject in subjects
+    a.qblink(href="https://sarthakmohanty.me/apc/QB/" + subject) #{subject}
+    br

@@ -23,7 +23,8 @@ router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
-    title: "Resources"
+    title: "Resources",
+    userMetadata: JSON.stringify(userP)
   });
 });
 
