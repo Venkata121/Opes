@@ -14,7 +14,10 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
 dotenv.config();
-Sentry.init({ dsn: 'https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967' });
+Sentry.init({
+  dsn:
+    "https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967"
+});
 
 // Configure Passport to use Auth0
 var strategy = new Auth0Strategy(
@@ -102,7 +105,6 @@ app.use("/", usersRouter);
 app.use(Sentry.Handlers.requestHandler());
 
 app.use(Sentry.Handlers.errorHandler());
-
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
