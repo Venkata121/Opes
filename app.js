@@ -8,6 +8,7 @@ var dotenv = require("dotenv");
 var passport = require("passport");
 var Auth0Strategy = require("passport-auth0");
 var flash = require("connect-flash");
+var AWS = require("aws-sdk");
 var userInViews = require("./lib/middleware/userInViews");
 var authRouter = require("./routes/auth");
 var indexRouter = require("./routes/index");
@@ -18,6 +19,9 @@ Sentry.init({
   dsn:
     "https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967"
 });
+
+// Configure S3
+var s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 // Configure Passport to use Auth0
 var strategy = new Auth0Strategy(
