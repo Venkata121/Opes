@@ -54,21 +54,15 @@ router.get("/resources", secured(), function(req, res, next) {
   ];
   var params = {
     Bucket: "sarthakcdn",
-    Key: "/secured/QB/" + subject,
-    Expires: 60
+    Key: "/secured/QB/Psychology",
+    Expires: 3600
   };
   var url = s3.getSignedUrl("getObject", params);
-  var compiledSubjectLink = pug.compileFile("resources.pug");
-  console.log(
-    compiledSubjectLink({
-      url: url
-    })
-  );
-  // "<p>Timothy's Pug source code!</p>"
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
+    url: url,
     subjects: [
       "ArtHistory",
       "Biology",
