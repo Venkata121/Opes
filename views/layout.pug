@@ -6,10 +6,16 @@ html
     link(rel='shortcut icon', href='https://sarthakmohanty.me/android-chrome-512x512.png')
     link(href='https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap', rel='stylesheet')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='https://js.cdn.manifold.co/@manifoldco/manifold-plan-table/dist/manifold-plan-table/manifold-plan-table.css')
   body
     include resourcesnormal
     include resourcessecured
     include pricing
+    script(async, type='module', src='https://js.cdn.manifold.co/@manifoldco/manifold-init/dist/manifold-init/manifold-init.esm.js')
+script(nomodule, src='https://js.cdn.manifold.co/@manifoldco/manifold-init/dist/manifold-init/manifold-init.js')
+script(async, type='module', src='https://js.cdn.manifold.co/@manifoldco/manifold-plan-table/dist/manifold-plan-table/manifold-plan-table.esm.js')
+script(nomodule, src='https://js.cdn.manifold.co/@manifoldco/manifold-plan-table/dist/manifold-plan-table/manifold-plan-table.js')
+
     .topnav( role="navigation" style="background-color: user.color_preference;")
       if locals.user
         h1.topnav.name Sarthak Mohanty
