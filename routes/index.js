@@ -26,6 +26,9 @@ router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({ apiVersion: "2006-03-01" });
+  AWS.config.update({
+    signatureVersion: "v4"
+  });
   var subject = [
     "ArtHistory",
     "Biology",
@@ -58,6 +61,7 @@ router.get("/resources", secured(), function(req, res, next) {
     Expires: 3600
   };
   var url = s3.getSignedUrl("getObject", params);
+  console.log(url);
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
