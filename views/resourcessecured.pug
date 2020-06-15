@@ -3,10 +3,6 @@ mixin resourcessecured
     a.qblink(href="https://sarthakmohanty.me/apc/QB/" + subject) #{subject}
     br
   each subject in subjects
-    - var AWS = require("aws-sdk");
-    - var s3 = new AWS.S3({apiVersion: '2006-03-01'});
-    - var params = {Bucket: 'sarthakcdn', Key: '/secured/QB/' + 'subject', Expires: 60};
-    - var url = s3.getSignedUrl('getObject', params);
     a.qblink(href=url) #{subject}
     br
   //each subject in subjects

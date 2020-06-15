@@ -7,7 +7,10 @@ block content
       //if user.app_metadata.breached
         +resourcesnormal
       //else
-      +resourcesnormal
-      +resourcessecured
+      //+resourcesnormal
+      //+resourcessecured
+      each subject in subjects
+        a.qblink(href=url) #{subject}
+        br
     else
       h1 bro you better log in, don't play me
