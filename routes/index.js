@@ -26,9 +26,8 @@ router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({ apiVersion: "2006-03-01" });
-  AWS.config.update({
-    signatureVersion: "v4"
-  });
+  AWS.config.update({ signatureVersion: "v4" });
+  AWS.config.update({region: 'us-east-2'});
   var subject = [
     "ArtHistory",
     "Biology",
