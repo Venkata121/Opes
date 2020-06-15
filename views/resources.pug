@@ -4,10 +4,10 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-card-4
     if locals.user
-      if user.app_metadata.breached
+      //if user.app_metadata.breached
         +resourcesnormal
-      else
-        +resourcesnormal
-        +resourcessecured
+      //else
+      +resourcesnormal
+      +resourcessecured
     else
       h1 bro you better log in, don't play me
