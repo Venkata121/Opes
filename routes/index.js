@@ -1,6 +1,8 @@
 var express = require("express");
 var secured = require("../lib/middleware/secured");
 var router = express.Router();
+var AWS = require("aws-sdk");
+var s3 = new AWS.S3({apiVersion: '2006-03-01'});
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
