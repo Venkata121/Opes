@@ -6,10 +6,17 @@ block content
     if locals.user
       h2 Session ID:
       h3 Each session ID is characterized by a harder to crack encryption mechanism. DINGY DONG DANG, don't share it :)
+      h5 Freshman:
       pre
-        =freshmanSessionID
-        =sophomoreSessionID
+        code=freshmanSessionID
+      h5 Sophomore:
+      pre
+        code=sophomoreSessionID
+      h5 Junior:
+      pre
         code=juniorSessionID
+      h5 Senior:
+      pre
         code=seniorSessionID
       //if user.app_metadata.breached
         +resourcesnormal
