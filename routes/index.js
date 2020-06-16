@@ -28,26 +28,34 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-var cf = require('aws-cloudfront-sign')
-var options = {keypairId: process.env.CLOUDFRONT_KEY_PAIR_ID, privateKeyPath: 'pk.pem', expireTime: new Date().getTime() + 300000}
-var signedCookies = cf.getSignedCookies('https://d2d3mdelw3jx6o.cloudfront.net/*', options);
+const cloudFront = new AWS.CloudFront.Signer(
+  process.env.PUBLIC_KEY,
+  process.env.PRIVATE_KEY
+);
 
-// You can now set cookies in your response header. For example:
-for(var cookieId in signedCookies) {
- res.cookie(cookieId, signedCookies[cookieId]);
-}
-var qbburl = cf.getSignedUrl('https://d2d3mdelw3jx6o.cloudfront.net/secured/QB/Biology/index.html', options);
-console.log('Signed URL: ' + qbburl);
+const policy = JSON.stringify({
+  Statement: [
+    {
+      Resource: 'http*://d2d3mdelw3jx6o.cloudfront.net/*', // http* => http and https
+      Condition: {
+        DateLessThan: {
+          'AWS:EpochTime':
+            Math.floor(new Date().getTime() / 1000) + 60 * 60 * 1, // Current Time in UTC + time in seconds, (60 * 60 * 1 = 1 hour)
+        },
+      },
+    },
+  ],
+});
   var qbahurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
     Key: "secured/QB/ArtHistory/index.html",
     Expires: 300
   });
-  //var qbburl = s3.getSignedUrl("getObject", {
-  //  Bucket: "sarthakcdn",
-  //  Key: "secured/QB/Biology/index.html",
-  //  Expires: 300
-  //});
+  var qbburl = s3.getSignedUrl("getObject", {
+    Bucket: "sarthakcdn",
+    Key: "secured/QB/Biology/index.html",
+    Expires: 300
+  });
   var qbcbcurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
     Key: "secured/QB/CalcBC/index.html",
