@@ -132,19 +132,25 @@ router.get("/resources", secured(), function(req, res, next) {
   });
   var qbsturl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
-    Key: "secured/QB/USGov/index.html",
+    Key: "secured/QB/Statistics/index.html",
     Expires: 300
   });
   var qbusgurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
-    Key: "secured/QB/USHistory/index.html",
+    Key: "secured/QB/USGov/index.html",
     Expires: 300
   });
   var qbushurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
+    Key: "secured/QB/USHistory/index.html",
+    Expires: 300
+  });
+  var qbwhurl = s3.getSignedUrl("getObject", {
+    Bucket: "sarthakcdn",
     Key: "secured/QB/WorldHistory/index.html",
     Expires: 300
   });
+  var sessionID = 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
@@ -153,6 +159,7 @@ router.get("/resources", secured(), function(req, res, next) {
     qbcbcurl: qbcbcurl,
     qbchemurl: qbchemurl,
     qbcgovurl: qbcgovurl,
+    qbcsurl: qbcsurl,
     qbcsaurl: qbcsaurl,
     qbelaurl: qbelaurl,
     qbeliurl:qbeliurl,
@@ -170,6 +177,8 @@ router.get("/resources", secured(), function(req, res, next) {
     qbsturl: qbsturl,
     qbusgurl: qbusgurl,
     qbushurl: qbushurl,
+    qbwhurl: qbwhurl,
+    sessionID: sessionID,
     subjects: [
       "ArtHistory",
       "Biology",

@@ -4,6 +4,7 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-card-4
     if locals.user
+      p=sessionID
       //if user.app_metadata.breached
         +resourcesnormal
       //else
