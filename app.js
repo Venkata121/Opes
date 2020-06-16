@@ -1,6 +1,5 @@
 var express = require("express");
 var Sentry = require("@sentry/node");
-var { init, showReportDialog } = require("@sentry/electron");
 var path = require("path");
 var logger = require("morgan");
 var cookieParser = require("cookie-parser");
@@ -18,15 +17,7 @@ var usersRouter = require("./routes/users");
 dotenv.config();
 Sentry.init({
   dsn:
-    "https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967",
-  beforeSend(event) {
-    // Check if it is an exception, if so, show the report dialog
-    // Note that this only will work in the renderer process, it's a noop on the main process
-    if (event.exception) {
-      showReportDialog();
-    }
-    return event;
-  }
+    "https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967"
 });
 
 // Configure S3
