@@ -19,6 +19,7 @@
     "pug": "^3.0.0",
     "aws-sdk": "^2.697.0",
     "@sentry/node": "^5.17.0",
-    "@sentry/electron": "^1.2.1"
+    "@sentry/electron": "^1.2.1",
+    "electron": "^9.0.4"
   }
 }

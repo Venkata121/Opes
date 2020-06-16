@@ -19,7 +19,7 @@ block content
         h5 Senior:
         pre
           code=seniorSessionID
-      //if locals.user.app_metadata.breached === true
+      if locals.user.app_metadata.breached === true
         +resourcesnormal
       //if locals.user.app_metadata.breached === false
         +resourcessecured

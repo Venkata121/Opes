@@ -1,5 +1,6 @@
 var express = require("express");
 var Sentry = require("@sentry/node");
+var { init, showReportDialog } = require("@sentry/electron");
 var path = require("path");
 var logger = require("morgan");
 var cookieParser = require("cookie-parser");
@@ -17,13 +18,7 @@ var usersRouter = require("./routes/users");
 dotenv.config();
 Sentry.init({
   dsn:
-    "https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967"
-});
-
-const { init, showReportDialog } = require('@sentry/electron');
-
-init({
-  dsn: 'https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967',
+    "https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967",
   beforeSend(event) {
     // Check if it is an exception, if so, show the report dialog
     // Note that this only will work in the renderer process, it's a noop on the main process
@@ -35,7 +30,7 @@ init({
 });
 
 // Configure S3
-var s3 = new AWS.S3({apiVersion: '2006-03-01'});
+var s3 = new AWS.S3({ apiVersion: "2006-03-01" });
 
 // Configure Passport to use Auth0
 var strategy = new Auth0Strategy(
