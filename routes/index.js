@@ -166,8 +166,6 @@ var sophomoreSessionID = randomString(32, '#aA')
 var juniorSessionID = randomString(64, '#A!')
 var seniorSessionID = randomString(256, 'a#A!')
 
-console.log(req.metadata)
-
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
