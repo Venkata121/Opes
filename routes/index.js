@@ -52,10 +52,11 @@ router.get("/resources", secured(), function(req, res, next) {
   "USHistory",
   "WorldHistory"
 ];
-  for (let subject of subjects) {
-  //var subject = subject
-  //console.log(subject);
-  }
+  var params = {
+    Bucket: "sarthakcdn",
+    Key: "secured/QB/Biology/index.html",
+    Expires: 300
+  };
   var params = {
     Bucket: "sarthakcdn",
     Key: "secured/QB/Biology/index.html",
