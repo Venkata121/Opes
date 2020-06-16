@@ -54,31 +54,53 @@ KwNchQyvn1VvZ8Q/EStiP5oxkZFOkVmop3HleuhZnSFUT2dWPT6OXAkLo3bfgXuU
 pJkC+wKBgHHCnC+BKysg7/uXmsvRRactpQO0BtdHuL0TT7t8ekJkwbHWl9QeAOYf
 3BFWrWJd8ttm5h4rNUGW4c6qsPUAGKyC0LxPS0HN6Usb3gvHtq7rhA8lF00YqqSz
 ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
------END RSA PRIVATE KEY-----`
-  
+-----END RSA PRIVATE KEY-----`;
+  const publicKey = `-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjNrNlHfwpHM/LzyogGi2
+cEVXDcWSUHgh4Fgrlrh7ZIJD83mdpHX2wLFhbVlId4fFRaqQTLu6XuiVrdlZj+m9
+YN6EAjQSmoK+0zVFXInCpJsCTDYsmNRMR7z7o2yfgIegzHRZwPe7R2H9rtHMUtHX
+cZFbK5rLruiQpc1kq4qiNgKF269aGDhOsG7d8FSuK+5BWNqEh9WcZnkf4LfjI21u
+LdgympwyKsCPY4PGbkRBFrUWPTna3w4hiZNVVcFItbpa5d50I0ICapwBqCOJu9Rn
+aE/ExuTyYtksccn5B9NGufplRx9QTpeFBwAzX8U2/WYTrQ9VKV8+u5XpoW/0rusF
+2wIDAQAB
+-----END PUBLIC KEY-----`;
+  const cloudFront = new AWS.CloudFront.Signer(publicKey, privateKey);
 
-  const cloudFront = new AWS.CloudFront.Signer('PUBLIC_ACCESS_KEY', privateKey);
-
-const policy = JSON.stringify({
-  "Statement": [
-    {
-      "Resource": "https://abcdefghijklmn.cloudfront.net/test/a.txt",
-      "Condition": {
-        "DateLessThan": {
-          "AWS:EpochTime": Math.floor((new Date()).getTime() / 1000) + (60 * 60 * 1) // Current Time in UTC + time in seconds, (60 * 60 * 1 = 1 hour)
+  const policy = JSON.stringify({
+    Statement: [
+      {
+        Resource: "http*://d2d3mdelw3jx6o.cloudfront.net/*", // http* => http and https
+        Condition: {
+          DateLessThan: {
+            "AWS:EpochTime":
+              Math.floor(new Date().getTime() / 1000) + 60 * 60 * 1 // Current Time in UTC + time in seconds, (60 * 60 * 1 = 1 hour)
+          }
         }
       }
-    }
-  ]
-});
+    ]
+  });
+  const cookie = cloudFront.getSignedCookie({
+    policy
+  });
 
-cloudFront.getSignedUrl({
-  policy,
-}, (err, url) => {
-  if (err) throw err;
-  console.log(url);
-});
-  
+  res.cookie("CloudFront-Key-Pair-Id", cookie["CloudFront-Key-Pair-Id"], {
+    domain: ".sarthakmohanty.me",
+    path: "/",
+    httpOnly: true
+  });
+
+  res.cookie("CloudFront-Policy", cookie["CloudFront-Policy"], {
+    domain: ".sarthakmohanty.me",
+    path: "/",
+    httpOnly: true
+  });
+
+  res.cookie("CloudFront-Signature", cookie["CloudFront-Signature"], {
+    domain: ".sarthakmohanty.me",
+    path: "/",
+    httpOnly: true
+  });
+
   var qbahurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
     Key: "secured/QB/ArtHistory/index.html",
