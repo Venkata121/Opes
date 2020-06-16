@@ -24,9 +24,9 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-const cookie1 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true}
-const cookie2 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true}
-const cookie3 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true}
+const cookie1 = { url: 'https://rb.sarthakmohanty.me', name: 'CloudFront_Policy', value: 'dummy', secure: true}
+const cookie2 = { url: 'https://rb.sarthakmohanty.me', name: 'CloudFront-Signature', value: 'dummy', secure: true}
+const cookie3 = { url: 'https://rb.sarthakmohanty.me', name: 'Cloudfront-Key-Pair-Id', value: process.env.CLOUDFRONT_KEY_PAIR_ID, secure: true}
 //express.defaultSession.cookies.set(cookie1, cookie2, cookie3)
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({
