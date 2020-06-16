@@ -29,12 +29,7 @@ const secondsSinceEpoch = Math.round(now.getTime() / 1000)
 const cookie1 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true, expirationDate: secondsSinceEpoch + 300}
 const cookie2 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy' }
 const cookie3 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy' }
-express.defaultSession.cookies.set(cookie1, cookie2, cookie3)
-  .then(() => {
-    // success
-  }, (error) => {
-    console.error(error)
-  })
+//express.defaultSession.cookies.set(cookie1, cookie2, cookie3)
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({
     apiVersion: "2006-03-01",
@@ -172,10 +167,7 @@ function randomString(length, chars) {
     return result;
 }
 
-var freshmanSessionID = randomString(16, 'aA')
-var sophomoreSessionID = randomString(32, '#aA')
-var juniorSessionID = randomString(64, '#A!')
-var seniorSessionID = randomString(256, 'a#A!')
+var SessionID = randomString(32, '#aA')
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
@@ -204,10 +196,7 @@ var seniorSessionID = randomString(256, 'a#A!')
     qbusgurl: qbusgurl,
     qbushurl: qbushurl,
     qbwhurl: qbwhurl,
-    freshmanSessionID: freshmanSessionID,
-    sophomoreSessionID: sophomoreSessionID,
-    juniorSessionID: juniorSessionID,
-    seniorSessionID: seniorSessionID,
+    SessionID: SessionID,
     subjects: [
       "ArtHistory",
       "Biology",

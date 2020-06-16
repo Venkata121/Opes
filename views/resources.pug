@@ -5,20 +5,8 @@ block content
   .w3-card-4
     if locals.user
       .sessionID
-        h2 Session ID:
-        h3 Each session ID is characterized by a harder to crack encryption mechanism. DINGY DONG DANG, don't share it :)
-        h5 Freshman:
-        pre
-          code=freshmanSessionID
-        h5 Sophomore:
-        pre
-          code=sophomoreSessionID
-        h5 Junior:
-        pre
-          code=juniorSessionID
-        h5 Senior:
-        pre
-          code=seniorSessionID
+        p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
+        h4 Session ID: #[code #{SessionID}]
       +resourcessecured
     else
       +resourcesnormal
