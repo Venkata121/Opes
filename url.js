@@ -61,87 +61,87 @@ var csurl = s3.getSignedUrl("getObject", {
   Key: "secured/QB/CompSci/index.html",
   Expires: 300
 });
-var csurl = s3.getSignedUrl("getObject", {
+var csaurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/CompSciA/index.html",
   Expires: 300
 });
-var csaurl = s3.getSignedUrl("getObject", {
+var elaurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/EnglishLang/index.html",
   Expires: 300
 });
-var elaurl = s3.getSignedUrl("getObject", {
+var eliurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/EnglishLit/index.html",
   Expires: 300
 });
-var eliurl = s3.getSignedUrl("getObject", {
+var esurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/EnvSci/index.html",
   Expires: 300
 });
-var esurl = s3.getSignedUrl("getObject", {
+var euurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/Euro/index.html",
   Expires: 300
 });
-var ewurl = s3.getSignedUrl("getObject", {
+var hgurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/HumanGeo/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var maurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/Macro/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var miurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/Micro/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var mturl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/MusicTheory/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var p1url = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/Physics1/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var p2url = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/Physics2/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var pcemurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/PhysicsCEM/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var pcmurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/PhysicsCMech/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var psurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/Psychology/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var sturl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/USGov/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var usgurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/USHistory/index.html",
   Expires: 300
 });
-var url = s3.getSignedUrl("getObject", {
+var ushurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/WorldHistory/index.html",
   Expires: 300
