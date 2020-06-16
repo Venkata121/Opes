@@ -46,6 +46,22 @@ const policy = JSON.stringify({
     },
   ],
 });
+    // Set Cookies after successful verification
+  const cookie = cloudFront.getSignedCookie({
+    policy,
+  });
+
+  res.cookie('CloudFront-Key-Pair-Id', cookie['CloudFront-Key-Pair-Id'], {
+
+  });
+
+  res.cookie('CloudFront-Policy', cookie['CloudFront-Policy'], {
+
+  });
+
+  res.cookie('CloudFront-Signature', cookie['CloudFront-Signature'], {
+
+  });
   var qbahurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
     Key: "secured/QB/ArtHistory/index.html",
