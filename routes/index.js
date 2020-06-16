@@ -52,7 +52,7 @@ router.get("/resources", secured(), function(req, res, next) {
   "USHistory",
   "WorldHistory"
 ];
-  for (let subject of subject) {
+  for (let subject of subjects) {
   //var subject = subject
   //console.log(subject);
   }
