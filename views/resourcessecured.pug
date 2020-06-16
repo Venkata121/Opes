@@ -3,8 +3,33 @@ mixin resourcessecured
     a.qblink(href="https://sarthakmohanty.me/apc/QB/" + subject) #{subject}
     br
   each subject in subjects
-    a.qblink(href=url) #{subject}
+    a.qblink(href=qbburl) #{subject}
     br
+    
+  a.qblink(href=qbburl) ArtHistory
+  p Biology
+  p CalcBC
+  p Chemistry
+  p CompGov
+  p CompSci
+  p CompSciA
+  p EnglishLang
+  p EnglishLit
+  p EnvSci
+  p Euro
+  p HumanGeo
+  p Macro
+  p Micro
+  p MusicTheory
+  p Physics1
+  p Physics2
+  p PhysicsCEM
+  p PhysicsCMech
+  p Psychology
+  p Statistics
+  p USGov
+  p USHistory
+  p WorldHistory
   //each subject in subjects
     iframe.qblink(src="https://sarthakcdn.s3.us-east-2.amazonaws.com/secured/QB/" + subject) #{subject}
     br
