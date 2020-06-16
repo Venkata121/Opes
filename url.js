@@ -5,12 +5,6 @@ var s3 = new AWS.S3({
   region: "us-east-2"
 });
 var subjects = [
-  "Chemistry",
-  "CompGov",
-  "CompSci",
-  "CompSciA",
-  "EnglishLang",
-  "EnglishLit",
   "EnvSci",
   "Euro",
   "HumanGeo",
@@ -27,152 +21,131 @@ var subjects = [
   "USHistory",
   "WorldHistory"
 ];
-var QBArtHistoryparams = {
-    Bucket: "sarthakcdn",
-    Key: "secured/QB/ArtHistory/index.html",
-    Expires: 300
-  };
-var QBArtHistoryurl = s3.getSignedUrl("getObject", QBArtHistoryparams);
 
-var QBBiologyparams = {
+var ahurl = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/ArtHistory/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/Biology/index.html",
   Expires: 300
-};
-var QBBiologyurl = s3.getSignedUrl("getObject", QBBiologyparams);
-
-var QBCalcBCparams = {
+});
+var url = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/CalcBC/index.html",
   Expires: 300
-};
-var QBCalcBCurl = s3.getSignedUrl("getObject", QBCalcBCparams);
-
-var QBChemistryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Chemistry/index.html",
-  Expires: 300
-};
-var QBChemistryurl = s3.getSignedUrl("getObject", QBChemistryparams);
-
-var QBCompGovparams = {
+});
+var url = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/CompGov/index.html",
   Expires: 300
-};
-var QBCompGovurl = s3.getSignedUrl("getObject", QBCompGovparams);
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/CompSci/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/CompSciA/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/EnglishLang/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/EnglishLit/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/EnvSci/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Euro/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/HumanGeo/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Macro/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Micro/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/MusicTheory/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
+var url = s3.getSignedUrl("getObject", {
+  Bucket: "sarthakcdn",
+  Key: "secured/QB/Biology/index.html",
+  Expires: 300
+});
 
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
-var ArtHistoryparams = {
-  Bucket: "sarthakcdn",
-  Key: "secured/QB/Biology/index.html",
-  Expires: 300
-};
-var ArtHistoryurl = s3.getSignedUrl("getObject", ArtHistoryparams);
+module.exports;

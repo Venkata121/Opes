@@ -24,7 +24,18 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  var url = require("url.js");
+  //var url = require("url.js");
+  var AWS = require("aws-sdk");
+  var s3 = new AWS.S3({
+    apiVersion: "2006-03-01",
+    signatureVersion: "v4",
+    region: "us-east-2"
+  });
+  var url = s3.getSignedUrl("getObject", {
+    Bucket: "sarthakcdn",
+    Key: "secured/QB/Biology/index.html",
+    Expires: 300
+  });
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
