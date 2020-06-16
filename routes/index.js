@@ -24,11 +24,9 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  const now = new Date();
-const secondsSinceEpoch = Math.round(now.getTime() / 1000)  
-const cookie1 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true, expirationDate: secondsSinceEpoch + 300}
-const cookie2 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy' }
-const cookie3 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy' }
+const cookie1 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true}
+const cookie2 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true}
+const cookie3 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true}
 //express.defaultSession.cookies.set(cookie1, cookie2, cookie3)
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({
