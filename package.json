@@ -19,6 +19,7 @@
     "pug": "^3.0.0",
     "aws-sdk": "^2.697.0",
     "@sentry/node": "^5.17.0",
-    "electron": "^9.0.4"
+    "electron": "^9.0.4",
+    "aws-cloudfront-sign": "^2.2.0"
   }
 }

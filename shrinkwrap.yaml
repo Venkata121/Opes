@@ -1,5 +1,6 @@
 dependencies:
   '@sentry/node': 5.17.0
+  aws-cloudfront-sign: 2.2.0
   aws-sdk: 2.697.0
   connect-flash: 0.1.1
   cookie-parser: 1.4.5
@@ -214,6 +215,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=
+  /aws-cloudfront-sign/2.2.0:
+    dependencies:
+      lodash: 3.10.1
+    dev: false
+    resolution:
+      integrity: sha1-ORD1ptDZD+wH8rTvirB/Pu+1Yl0=
   /aws-sdk/2.697.0:
     dependencies:
       buffer: 4.9.2
@@ -997,6 +1004,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-9ykJ/46SN/9KPM/sichzQ7OvXyGDYKGTaDlKMGCAlg2UK8KRy4jb0d8sFc+0Tt0YYnThq8X2RZgCg74RPxgcVA==
+  /lodash/3.10.1:
+    dev: false
+    resolution:
+      integrity: sha1-W/Rejkm6QYnhfUgnid/RW9FAt7Y=
   /lodash/4.17.15:
     dev: false
     resolution:
@@ -1853,6 +1864,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   '@sentry/node': ^5.17.0
+  aws-cloudfront-sign: ^2.2.0
   aws-sdk: ^2.697.0
   connect-flash: ^0.1.1
   cookie-parser: ^1.4.5
