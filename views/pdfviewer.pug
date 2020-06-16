@@ -1,6 +1,6 @@
-
-button.btn.btn-primary.btn-lg(data-toggle='modal' data-target='#myModal')
-  | Launch demo modal
+mixin pdfviewer
+  button.btn.btn-primary.btn-lg(data-toggle='modal' data-target='#myModal')
+    | Launch demo modal
 
   #myModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
     .modal-dialog
@@ -11,6 +11,6 @@ button.btn.btn-primary.btn-lg(data-toggle='modal' data-target='#myModal')
         .modal-body
           div(style='text-align: center;')
             iframe(src='http://docs.google.com/gview?url=http://www.pdf995.com/samples/pdf.pdf&embedded=true' style='width:500px; height:500px;' frameborder='0')
-      .modal-footer
-        button.btn.btn-default(type='button' data-dismiss='modal') Close
-        button.btn.btn-primary(type='button') Save changes
+        .modal-footer
+          button.btn.btn-default(type='button' data-dismiss='modal') Close
+          button.btn.btn-primary(type='button') Save changes

@@ -55,16 +55,10 @@ pJkC+wKBgHHCnC+BKysg7/uXmsvRRactpQO0BtdHuL0TT7t8ekJkwbHWl9QeAOYf
 3BFWrWJd8ttm5h4rNUGW4c6qsPUAGKyC0LxPS0HN6Usb3gvHtq7rhA8lF00YqqSz
 ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
 -----END RSA PRIVATE KEY-----`;
-  const publicKey = `-----BEGIN PUBLIC KEY-----
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjNrNlHfwpHM/LzyogGi2
-cEVXDcWSUHgh4Fgrlrh7ZIJD83mdpHX2wLFhbVlId4fFRaqQTLu6XuiVrdlZj+m9
-YN6EAjQSmoK+0zVFXInCpJsCTDYsmNRMR7z7o2yfgIegzHRZwPe7R2H9rtHMUtHX
-cZFbK5rLruiQpc1kq4qiNgKF269aGDhOsG7d8FSuK+5BWNqEh9WcZnkf4LfjI21u
-LdgympwyKsCPY4PGbkRBFrUWPTna3w4hiZNVVcFItbpa5d50I0ICapwBqCOJu9Rn
-aE/ExuTyYtksccn5B9NGufplRx9QTpeFBwAzX8U2/WYTrQ9VKV8+u5XpoW/0rusF
-2wIDAQAB
------END PUBLIC KEY-----`;
-  const cloudFront = new AWS.CloudFront.Signer(publicKey, privateKey);
+  const cloudFront = new AWS.CloudFront.Signer(
+    process.env.CLOUDFRONT_KEY_PAIR_ID,
+    privateKey
+  );
 
   const policy = JSON.stringify({
     Statement: [
@@ -86,19 +80,19 @@ aE/ExuTyYtksccn5B9NGufplRx9QTpeFBwAzX8U2/WYTrQ9VKV8+u5XpoW/0rusF
   res.cookie("CloudFront-Key-Pair-Id", cookie["CloudFront-Key-Pair-Id"], {
     domain: ".sarthakmohanty.me",
     path: "/",
-    httpOnly: true
+    secure: true
   });
 
   res.cookie("CloudFront-Policy", cookie["CloudFront-Policy"], {
     domain: ".sarthakmohanty.me",
     path: "/",
-    httpOnly: true
+    secure: true
   });
 
   res.cookie("CloudFront-Signature", cookie["CloudFront-Signature"], {
     domain: ".sarthakmohanty.me",
     path: "/",
-    httpOnly: true
+    secure: true
   });
 
   var qbahurl = s3.getSignedUrl("getObject", {
