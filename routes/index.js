@@ -28,54 +28,6 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  const cloudFront = new AWS.CloudFront.Signer(
-    process.env.PUBLIC_KEY,
-    process.env.PRIVATE_KEY
-  );
-
-  let keyPairId = process.env.CLOUDFRONT_KEY_PAIR_ID;
-  let privateKey = https://cdn.glitch.com/8a4d5283-c9f0-4cc9-9cb0-ff953383dacc%2Fpk-APKAIWFXBSLFXYX5BHIA.pem?v=1592297141809';
-
-  let cfUrl = "d2d3mdelw3jx6o.cloudfront.net";
-
-  let policy = {
-    Statement: [
-      {
-        Resource: "http*://" + cfUrl + "/*",
-        Condition: {
-          DateLessThan: {
-            "AWS:EpochTime":
-              Math.floor(new Date().getTime() / 1000) + 60 * 60 * 1
-          }
-        }
-      }
-    ]
-  };
-
-  let policyString = JSON.stringify(policy);
-
-  let signer = new AWS.CloudFront.Signer(keyPairId, privateKey);
-
-  var options = { url: "http://" + cfUrl, policy: policyString };
-
-  signer.getSignedCookie(options, function(err, cookie) {
-    if (err) {
-      res.send(err);
-    } else {
-      console.log("cookies: ");
-      console.log(cookie);
-      res.send(cookie);
-    }
-  });
-  // Set Cookies after successful verification
-  const cookie = cloudFront.getSignedCookie({
-    policy
-  });
-  // res.cookie("CloudFront-Key-Pair-Id", cookie["CloudFront-Key-Pair-Id"], {});
-
-  // res.cookie("CloudFront-Policy", cookie["CloudFront-Policy"], {});
-
-  // res.cookie("CloudFront-Signature", cookie["CloudFront-Signature"], {});
   var qbahurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
     Key: "secured/QB/ArtHistory/index.html",
