@@ -1,4 +1,12 @@
 mixin pdfviewer
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
+  // Latest compiled and minified CSS
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css' integrity='sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu' crossorigin='anonymous')
+  // Optional theme
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css' integrity='sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ' crossorigin='anonymous')
+  // Latest compiled and minified JavaScript
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js' integrity='sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd' crossorigin='anonymous')
+
   button.btn.btn-primary.btn-lg(data-toggle='modal' data-target='#myModal')
     | Launch demo modal
 
@@ -10,7 +18,7 @@ mixin pdfviewer
           h4#myModalLabel.modal-title Modal title
         .modal-body
           div(style='text-align: center;')
-            iframe(src='http://docs.google.com/gview?url=http://www.pdf995.com/samples/pdf.pdf&embedded=true' style='width:500px; height:500px;' frameborder='0')
+            iframe(src='https://sarthakcdn.s3.us-east-2.amazonaws.com/secured/PPC/Chemistry/SG_Unit1ProgressCheckFRQ.pdf#toolbar=0' style='width:500px; height:500px;' frameborder='0')
         .modal-footer
           button.btn.btn-default(type='button' data-dismiss='modal') Close
           button.btn.btn-primary(type='button') Save changes
