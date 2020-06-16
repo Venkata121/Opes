@@ -24,6 +24,18 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
+  const now = new Date();
+now.setMinutes(now.getMinutes() + 5);
+document.cookie = `cat_name=garfield;expires=${now.toUTCString()};`;
+const cookie1 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy', secure: true, expirationDate: 0}
+const cookie2 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy' }
+const cookie3 = { url: 'https://rb.sarthakmohanty.me', name: 'dummy_name', value: 'dummy' }
+express.defaultSession.cookies.set(cookie1, cookie2, cookie3)
+  .then(() => {
+    // success
+  }, (error) => {
+    console.error(error)
+  })
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({
     apiVersion: "2006-03-01",
