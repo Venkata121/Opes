@@ -4,6 +4,11 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-card-4
     if locals.user
+      +resourcesnormal
+      object(data='https://sarthakcdn.s3.us-east-2.amazonaws.com/secured/PPC/Chemistry/SG_Unit1ProgressCheckFRQ.pdf' type='application/pdf' width='100%' height='100%')
+      p
+      | This browser does not support inline PDFs. Please download the PDF to view it: 
+      a(href='https://sarthakcdn.s3.us-east-2.amazonaws.com/secured/PPC/Chemistry/SG_Unit1ProgressCheckFRQ.pdf') Download PDF
       .sessionID
         p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
         h4 Session ID: #[code #{SessionID}]
