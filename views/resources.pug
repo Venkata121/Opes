@@ -4,7 +4,7 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-card-4
     if locals.user
-      //.sessionID
+      .sessionID
         h2 Session ID:
         h3 Each session ID is characterized by a harder to crack encryption mechanism. DINGY DONG DANG, don't share it :)
         h5 Freshman:
@@ -19,12 +19,6 @@ block content
         h5 Senior:
         pre
           code=seniorSessionID
-      if locals.user.app_metadata.breached === true
-        +resourcesnormal
-      //if locals.user.app_metadata.breached === false
-        +resourcessecured
-      //else
-        p bro what you tryna do
-      p hi
+      +resourcessecured
     else
-      h1 bro you better log in, don't play me
+      +resourcesnormal

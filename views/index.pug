@@ -4,7 +4,11 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-container
     if locals.user
-      p You now have access!, but you shouldn't be seeing this page.
+      p While you do have access, resources aren't on this page. Go ahead and go
+      |
+      a(href="/resources") here
+      |
+      p if you want to check em out.
     else
       center
         h2 You are not logged in! Please #[a(href="/login") Log In] to continue.
