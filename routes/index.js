@@ -26,7 +26,6 @@ router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({ apiVersion: "2006-03-01", signatureVersion: 'v4', region: 'us-east-2' });
-  //AWS.config.update({region: 'us-east-2'});
   var subject = [
     "ArtHistory",
     "Biology",
@@ -53,13 +52,17 @@ router.get("/resources", secured(), function(req, res, next) {
     "USHistory",
     "WorldHistory"
   ];
-  var bioparams = {
+  for (let subject of subject) {
+    var subject = subject
+  //console.log(subject);
+  }
+  var params = {
     Bucket: "sarthakcdn",
     Key: "secured/QB/Biology/index.html",
     Expires: 300
   };
-  var biourl = s3.getSignedUrl("getObject", params);
-  console.log(url);
+  var url = s3.getSignedUrl("getObject", params);
+  console.log(WorldHistory);
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
