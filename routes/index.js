@@ -73,26 +73,27 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
       }
     ]
   });
+
   const cookie = cloudFront.getSignedCookie({
     policy
   });
 
   res.cookie("CloudFront-Key-Pair-Id", cookie["CloudFront-Key-Pair-Id"], {
-    domain: ".d2d3mdelw3jx6o.cloudfront.net",
+    //domain: ".sarthakmohanty.me",
     path: "/",
-    //secure: true
+    httpOnly: true
   });
 
   res.cookie("CloudFront-Policy", cookie["CloudFront-Policy"], {
-    domain: ".d2d3mdelw3jx6o.cloudfront.net",
+    //domain: ".sarthakmohanty.me",
     path: "/",
-    //secure: true
+    httpOnly: true
   });
 
   res.cookie("CloudFront-Signature", cookie["CloudFront-Signature"], {
-    domain: ".d2d3mdelw3jx6o.cloudfront.net",
+    //domain: ".sarthakmohanty.me",
     path: "/",
-    //secure: true
+    httpOnly: true
   });
 
   var qbahurl = s3.getSignedUrl("getObject", {
