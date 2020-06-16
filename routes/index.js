@@ -150,7 +150,23 @@ router.get("/resources", secured(), function(req, res, next) {
     Key: "secured/QB/WorldHistory/index.html",
     Expires: 300
   });
-  var sessionID = 
+
+function randomString(length, chars) {
+    var mask = '';
+    if (chars.indexOf('a') > -1) mask += 'abcdefghijklmnopqrstuvwxyz';
+    if (chars.indexOf('A') > -1) mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (chars.indexOf('#') > -1) mask += '0123456789';
+    if (chars.indexOf('!') > -1) mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';
+    var result = '';
+    for (var i = length; i > 0; --i) result += mask[Math.floor(Math.random() * mask.length)];
+    return result;
+}
+
+var freshmanSessionID = randomString(16, 'aA')
+var sophomoreSessionID = randomString(32, '#aA')
+var juniorSessionID = randomString(64, '#A!')
+var seniorSessionID = randomString(256, 'a#A!')
+
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
@@ -162,7 +178,7 @@ router.get("/resources", secured(), function(req, res, next) {
     qbcsurl: qbcsurl,
     qbcsaurl: qbcsaurl,
     qbelaurl: qbelaurl,
-    qbeliurl:qbeliurl,
+    qbeliurl: qbeliurl,
     qbesurl: qbesurl,
     qbeuurl: qbeuurl,
     qbhgurl: qbhgurl,
@@ -178,7 +194,10 @@ router.get("/resources", secured(), function(req, res, next) {
     qbusgurl: qbusgurl,
     qbushurl: qbushurl,
     qbwhurl: qbwhurl,
-    sessionID: sessionID,
+    freshmanSessionID: freshmanSessionID,
+    sophomoreSessionID: sophomoreSessionID,
+    juniorSessionID: juniorSessionID,
+    seniorSessionID: seniorSessionID,
     subjects: [
       "ArtHistory",
       "Biology",

@@ -4,7 +4,13 @@ block content
   link(rel='stylesheet', href='/stylesheets/style.css')
   .w3-card-4
     if locals.user
-      p=sessionID
+      h2 Session ID:
+      h3 Each session ID is characterized by a harder to crack encryption mechanism. DINGY DONG DANG, don't share it :)
+      pre
+        =freshmanSessionID
+        =sophomoreSessionID
+        code=juniorSessionID
+        code=seniorSessionID
       //if user.app_metadata.breached
         +resourcesnormal
       //else
