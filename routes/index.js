@@ -24,47 +24,7 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  var AWS = require("aws-sdk");
-  var s3 = new AWS.S3({ apiVersion: "2006-03-01", signatureVersion: 'v4', region: 'us-east-2' });
-  var subjects = [
-  "ArtHistory",
-  "Biology",
-  "CalcBC",
-  "Chemistry",
-  "CompGov",
-  "CompSci",
-  "CompSciA",
-  "EnglishLang",
-  "EnglishLit",
-  "EnvSci",
-  "Euro",
-  "HumanGeo",
-  "Macro",
-  "Micro",
-  "MusicTheory",
-  "Physics1",
-  "Physics2",
-  "PhysicsCEM",
-  "PhysicsCMech",
-  "Psychology",
-  "Statistics",
-  "USGov",
-  "USHistory",
-  "WorldHistory"
-];
-  var params = {
-    Bucket: "sarthakcdn",
-    Key: "secured/QB/Biology/index.html",
-    Expires: 300
-  };
-  var params = {
-    Bucket: "sarthakcdn",
-    Key: "secured/QB/Biology/index.html",
-    Expires: 300
-  };
-  var url = s3.getSignedUrl("getObject", params);
-  //console.log(WorldHistory);
-
+  var url = require("url.js");
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
