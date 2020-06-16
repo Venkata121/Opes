@@ -64,14 +64,8 @@ h6 {
   font-family: "Inter", sans-serif;
 }
 
-.qblink a {
+.qblink {
   color: rgba(51, 122, 183, 50%);
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-}
-
-.qblink a:hover {
-  color: rgba(51, 122, 183, 100%);
   text-decoration: none;
   font-family: "Inter", sans-serif;
 }
