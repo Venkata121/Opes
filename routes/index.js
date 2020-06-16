@@ -4,7 +4,6 @@ var router = express.Router();
 var AWS = require("aws-sdk");
 var s3 = new AWS.S3({ apiVersion: "2006-03-01" });
 var pug = require("pug");
-import {subjects} from 'arrays.js';
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
@@ -27,6 +26,32 @@ router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
   var AWS = require("aws-sdk");
   var s3 = new AWS.S3({ apiVersion: "2006-03-01", signatureVersion: 'v4', region: 'us-east-2' });
+  var subjects = [
+  "ArtHistory",
+  "Biology",
+  "CalcBC",
+  "Chemistry",
+  "CompGov",
+  "CompSci",
+  "CompSciA",
+  "EnglishLang",
+  "EnglishLit",
+  "EnvSci",
+  "Euro",
+  "HumanGeo",
+  "Macro",
+  "Micro",
+  "MusicTheory",
+  "Physics1",
+  "Physics2",
+  "PhysicsCEM",
+  "PhysicsCMech",
+  "Psychology",
+  "Statistics",
+  "USGov",
+  "USHistory",
+  "WorldHistory"
+];
   for (let subject of subject) {
   //var subject = subject
   //console.log(subject);
