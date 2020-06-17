@@ -79,19 +79,19 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
   });
 
   res.cookie("CloudFront-Key-Pair-Id", cookie["CloudFront-Key-Pair-Id"], {
-    //domain: ".sarthakmohanty.me",
+    domain: ".sarthakmohanty.me",
     path: "/",
     httpOnly: true
   });
 
   res.cookie("CloudFront-Policy", cookie["CloudFront-Policy"], {
-    //domain: ".sarthakmohanty.me",
+    domain: ".sarthakmohanty.me",
     path: "/",
     httpOnly: true
   });
 
   res.cookie("CloudFront-Signature", cookie["CloudFront-Signature"], {
-    //domain: ".sarthakmohanty.me",
+    domain: ".sarthakmohanty.me",
     path: "/",
     httpOnly: true
   });
