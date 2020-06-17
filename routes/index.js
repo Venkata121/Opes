@@ -95,10 +95,6 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     path: "/",
     httpOnly: true
   });
-
-  fetch('https://example.com', {
-  credentials: 'include'
-});
   
   var qbahurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
