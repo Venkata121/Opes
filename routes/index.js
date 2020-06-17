@@ -287,4 +287,12 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
   });
 });
 
+router.get("/shutdown", (req, res) => {
+  res.end("OK");
+  // A small timeout so that the app has the time to respond
+  setTimeout(() => {
+    process.exit(0);
+  }, 500);
+});
+
 module.exports = router;
