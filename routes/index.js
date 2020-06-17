@@ -96,8 +96,15 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     httpOnly: true
   });
 
-  console.log(cookie);
-  
+  fetch("https://api.github.com/orgs/nodejs", {
+    credentials: "include" // Useful for including session ID (and, IIRC, authorization headers)
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data); // Prints result from `response.json()`
+    })
+    .catch(error => console.error(error));
+
   var qbahurl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
     Key: "secured/QB/ArtHistory/index.html",
