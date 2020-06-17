@@ -17,9 +17,8 @@
     "passport": "^0.4.1",
     "passport-auth0": "^1.3.3",
     "pug": "^3.0.0",
-    "aws-sdk": "^2.697.0",
+    "aws-sdk": "^2.698.0",
     "@sentry/node": "^5.17.0",
-    "electron": "^9.0.4",
-    "aws-cloudfront-sign": "^2.2.0"
+    "electron": "^9.0.4"
   }
 }
