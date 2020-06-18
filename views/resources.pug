@@ -3,6 +3,7 @@ extends layout
 block content
   .w3-card-4
     if locals.user
+      .alert.alert-primary(role='alert') This page is currently set to the development pipeline. Production features won't work unless you change it back to the prod pipeline.
       .sessionID
         p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
         h4 Session ID: #[code #{SessionID}]

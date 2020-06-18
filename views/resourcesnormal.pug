@@ -2,7 +2,6 @@ mixin resourcesnormal
   h3 for plebs
   p we got some *free* resources... so here ya go:
   // Button trigger modal
-  button.btn.btn-primary.btn-sm(data-toggle='modal' data-target='#myModal') Launch demo modal
   // Modal
   #myModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
     .modal-dialog.modal-lg
@@ -14,3 +13,10 @@ mixin resourcesnormal
         .modal-footer
           button.btn.btn-default(type='button' data-dismiss='modal') Close
           button.btn.btn-primary(type='button') Save changes
+  .card(style='width: 18rem;')
+    .card-body
+      h5.card-title Lorem Ipsum
+      h6.card-subtitle.mb-2.text-muted Dolor Sit Amet
+      p.card-text
+        | Lorem Ipsum Dolor Sit Amet. Sarthak doesn't know the rest so this is his jerry-rig filler text. Did that rhyme??
+      button.card-link.btn.btn-primary.btn-sm(data-toggle='modal' data-target='#myModal') Launch demo modal
