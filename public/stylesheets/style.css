@@ -69,18 +69,17 @@ h6 {
 }
 
 a.qblink {
-  color: rgba(51, 122, 183, 100%);
+  color: #337AB7;
   text-decoration: none;
   font-family: "Inter", sans-serif;
 }
 a.qblink:hover {
-  color: rgba(51, 122, 183, 75%);
+  color: #337ABE;
   text-decoration: none;
   font-family: "Inter", sans-serif;
 }
 
 manifold-init {
-  color: rgba(51, 122, 183, 100%);
   text-decoration: none;
   font-family: "Inter", sans-serif;
 }
