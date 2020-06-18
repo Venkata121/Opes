@@ -3,10 +3,12 @@ extends layout
 block content
   .w3-card-4
     if locals.user
-      +resourcesnormal
       .sessionID
         p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
         h4 Session ID: #[code #{SessionID}]
+      br
+      +resourcesnormal
+      br
       +resourcessecured
     else
       +resourcesnormal
