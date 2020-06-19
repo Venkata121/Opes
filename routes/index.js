@@ -228,6 +228,17 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     return result;
   }
   var SessionID = randomString(32, "#aA");
+
+  var fetch = require("node-fetch");
+
+  fetch("https://scibowldb.com/api/questions/random") // Call the fetch function passing the url of the API as a parameter
+    .then(function() {
+      console.log();
+    })
+    .catch(function() {
+      // This is where you run code if the server returns any errors
+    });
+
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
@@ -313,15 +324,5 @@ app.use(
     graphiql: true
   })
 );
-
-var fetch = require("node-fetch")
-
-fetch("https://scibowldb.com/api/questions/random") // Call the fetch function passing the url of the API as a parameter
-.then(function() {
-    // Your code for handling the data you get from the API
-})
-.catch(function() {
-    // This is where you run code if the server returns any errors
-});
 
 module.exports = router;
