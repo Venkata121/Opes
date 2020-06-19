@@ -24,10 +24,11 @@ html
     .topnav( role="navigation" )
       if locals.user
         h1.topnav.name Sarthak Mohanty
-        a(href="/resources") Resources
-        a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
-        a(href="/user" id="profileDropDown") Profile
-        a(id="qsLogoutBtn" href="/logout") Log Out
+        .spincontainer.shape.bd
+          a(href="/resources") Resources
+          a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
+          a(href="/user" id="profileDropDown") Profile
+          a(id="qsLogoutBtn" href="/logout") Log Out
       else
         h1.topnav.name Sarthak Mohanty
         a(href="/") Home
