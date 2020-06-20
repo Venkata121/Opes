@@ -10,7 +10,7 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap");
 :root {
   --blue: #2A9FD6;
   --indigo: #6610f2;
@@ -38,8 +38,8 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
@@ -69,7 +69,7 @@ section {
 }
 body {
   margin: 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter,
     "Helvetica Neue", Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -6123,7 +6123,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter,
     "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -6232,7 +6232,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Inter,
     "Helvetica Neue", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
