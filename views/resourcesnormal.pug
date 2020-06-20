@@ -1,6 +1,5 @@
 mixin resourcesnormal
-  h3 for plebs
-  p we got some *free* resources... so here ya go:
+  h1 Free Resources
   // Button trigger modal
   // Modal
   #myModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
@@ -9,10 +8,9 @@ mixin resourcesnormal
         .modal-header
           button.close(type='button' data-dismiss='modal' aria-hidden='true') &times;
         .modal-body
-          iframe(src='http://docs.google.com/gview?url=http://www.pdf995.com/samples/pdf.pdf&embedded=true' style='width:780px; height:1000px;' frameborder='0')
+          iframe(src='http://docs.google.com/gview?url=http://www.pdf995.com/samples/pdf.pdf&embedded=true' style='width:700px; height:1000px;' frameborder='0')
         .modal-footer
-          button.btn.btn-default(type='button' data-dismiss='modal') Close
-          button.btn.btn-primary(type='button') Save changes
+          button.btn.btn-secondary(type='button' data-dismiss='modal') Close
   .card(style='width: 18rem;')
     .card-body
       h5.card-title Lorem Ipsum
