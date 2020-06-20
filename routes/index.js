@@ -117,7 +117,7 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     url:
       "https://d2d3mdelw3jx6o.cloudfront.net/secured/QB/ArtHistory/index.html",
     policy: policy
-    });
+  });
 
   // var qbahurl = s3.getSignedUrl("getObject", {
   //   Bucket: "sarthakcdn",
