@@ -1,5 +1,5 @@
 {
-  "name": "sarthakrb",
+  "name": "resourcebank",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -22,6 +22,7 @@
     "electron": "^9.0.4",
     "express-graphql": "^0.9.0",
     "graphql": "^15.1.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "aws-cloudfront-sign": "^2.2.0"
   }
 }

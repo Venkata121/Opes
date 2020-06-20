@@ -96,11 +96,25 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     httpOnly: true
   });
 
-  var qbahurl = s3.getSignedUrl("getObject", {
-    Bucket: "sarthakcdn",
-    Key: "secured/QB/ArtHistory/index.html",
-    Expires: 300
-  });
+  var cfsign = require("aws-cloudfront-sign");
+
+  // Generating a signed URL
+  var qbahurl = cfsign.getSignedUrl(
+    "http://example.cloudfront.net/path/to/s3/object",
+    {
+      keypairId: process.env.PUBLIC_KEY,
+      privateKeyString: privateKey,
+      // Optional - this can be used as an alternative to privateKeyString
+      //privateKeyPath: "/path/to/private/key",
+      expireTime: 1426625464599
+    }
+  );
+
+  // var qbahurl = s3.getSignedUrl("getObject", {
+  //   Bucket: "sarthakcdn",
+  //   Key: "secured/QB/ArtHistory/index.html",
+  //   Expires: 300
+  // });
   var qbburl = s3.getSignedUrl("getObject", {
     Bucket: "sarthakcdn",
     Key: "secured/QB/Biology/index.html",
