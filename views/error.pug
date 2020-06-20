@@ -1,13 +1,10 @@
 extends layout
 
 block content
-  .row
-    .col-xs-8.col-sm-6
-      center
-        img(src="https://cdn.glitch.com/8a4d5283-c9f0-4cc9-9cb0-ff953383dacc%2Frush-7.svg?v=1592637469594" width="600px")
-    .col-xs-4.col-sm-6.align-middle
-      h4 Error #{error.status}
-      p This issue has been reported. If this keeps happening, text #[span Sarthak] directly.
+  center
+    img(src="https://cdn.glitch.com/8a4d5283-c9f0-4cc9-9cb0-ff953383dacc%2Frush-7.svg?v=1592637469594" width="500px")
+    h4 Error #{error.status}
+    p This issue has been reported. If this keeps happening, text #[span Sarthak] directly.
   //h1= message
   //h2= error.status
   //pre #{error.stack}
