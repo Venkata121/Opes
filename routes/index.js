@@ -99,19 +99,25 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
   var cfsign = require("aws-cloudfront-sign");
 
   var currentEpochTime = Math.floor(new Date().getTime() / 1000) + 60 * 60 * 1;
-  
+
   var currentEpochTimep5min = currentEpochTime + 300;
-  
+
   // Generating a signed URL
-  var qbahurl = cfsign.getSignedUrl(
-    "http://d2d3mdelw3jx6o.cloudfront.net/secured/QB/ArtHistory/index.html",
-    {
-      keypairId: process.env.CLOUDFRONT_KEY_PAIR_ID,
-      privateKeyString: privateKey,
-      expireTime: 1426625464599,
-      //policy: policy
-    }
-  );
+  // var qbahurl = cfsign.getSignedUrl(
+  //   "http://d2d3mdelw3jx6o.cloudfront.net/secured/QB/ArtHistory/index.html",
+  //   {
+  //     keypairId: process.env.CLOUDFRONT_KEY_PAIR_ID,
+  //     privateKeyString: privateKey,
+  //     //expireTime: currentEpochTimep5min,
+  //     policy: policy
+  //   }
+  // );
+
+  var qbahurl = cloudFront.getSignedUrl({
+    url:
+      "https://d2d3mdelw3jx6o.cloudfront.net/secured/QB/ArtHistory/index.html",
+    policy: policy
+    });
 
   // var qbahurl = s3.getSignedUrl("getObject", {
   //   Bucket: "sarthakcdn",
