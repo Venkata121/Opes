@@ -16,8 +16,9 @@ searchBar.addEventListener('keyup', (e) => {
 
 const loadCharacters = async () => {
     try {
-        const res = await fetch('https://hp-api.herokuapp.com/api/characters');
-        hpCharacters = await res.json();
+        // const res = await fetch('https://hp-api.herokuapp.com/api/characters');
+        // hpCharacters = await res.json();
+        hpCharacters = 'public/free-resources_data.json'
         displayCharacters(hpCharacters);
     } catch (err) {
         console.error(err);
@@ -30,8 +31,7 @@ const displayCharacters = (characters) => {
             return `
             <li class="card card-body">
                 <h2 class="card-title">${character.name}</h2>
-                <p>House: ${character.house}</p>
-                <img src="${character.image}"></img>
+                <p class="card-subtitle">House: ${character.house}</p>
             </li>
         `;
         })
