@@ -29,8 +29,8 @@ const displayResources = (resources) => {
         .map((resource) => {
             return `
             <li class="card card-body">
-                <h2 class="card-title">${resource.resourceName}</h2>
-                <p class="card-subtitle">Link: ${resource.link}</p>
+                <h5 class="card-title">${resource.resourceName}</h5>
+                <a href="${resource.link}" class="btn btn-primary">LINKY DINKY</a>
             </li>
         `;
         })

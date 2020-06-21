@@ -127,6 +127,10 @@ manifold-init {
   font-family: "Inter", sans-serif;
 }
 
+.securedResourcesContainer {
+  display: block;
+}
+
 /* Search Bar */
 
 .searchContainer {
