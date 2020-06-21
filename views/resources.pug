@@ -2,18 +2,15 @@ extends layout
 
 block content
   .w3-card-4
-    if locals.user
-      .alert.alert-warning.alert-dismissible.fade.show(role='alert')
-        strong Holy Guacamole!
-        |  NODE_ENV set to development, PROD features not available.
-        button.close(type='button' data-dismiss='alert' aria-label='Close')
-          span(aria-hidden='true') &times;
-      .sessionID
-        p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
-        h4 Session ID: #[code #{SessionID}]
-      br
-      +resourcesnormal
-      if user.nickname === 'sarthaktexas'
-        +resourcessecured
-    else
-      +resourcesnormal
+    .alert.alert-warning.alert-dismissible.fade.show(role='alert')
+      strong Holy Guacamole!
+      |  NODE_ENV set to development, PROD features not available.
+      button.close(type='button' data-dismiss='alert' aria-label='Close')
+        span(aria-hidden='true') &times;
+    .sessionID
+      p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
+      h4 Session ID: #[code #{SessionID}]
+    br
+    +resourcesnormal
+    if user.nickname === 'sarthaktexas'
+      +resourcessecured
