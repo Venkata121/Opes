@@ -1,8 +1,18 @@
 mixin resourcesnormal
   h1 Free Resources
+  
+  // https://www.youtube.com/watch?v=wxz5vJ1BWrc
+  // https://www.youtube.com/watch?v=1iysNUrI3lw
+  
+  .searchContainer
+  h1 &#x2728;Harry Potter Characters &#x2728;
+  #searchWrapper
+    input#searchBar(type='text' name='searchBar' placeholder='search for a character')
+  ul#charactersList
+  
   // Button trigger modal
   // Modal
-  #myModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
+  //#myModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true')
     .modal-dialog.modal-lg
       .modal-content
         .modal-header
@@ -11,7 +21,7 @@ mixin resourcesnormal
           iframe(src='http://docs.google.com/gview?url=http://www.pdf995.com/samples/pdf.pdf&embedded=true' style='width:700px; height:1000px;' frameborder='0')
         .modal-footer
           button.btn.btn-secondary(type='button' data-dismiss='modal') Close
-  .card(style='width: 18rem;')
+  //.card(style='width: 18rem;')
     .card-body
       h5.card-title Lorem Ipsum
       h6.card-subtitle.mb-2.text-muted Dolor Sit Amet
