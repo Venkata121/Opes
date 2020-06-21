@@ -137,14 +137,14 @@ manifold-init {
   float: left;
 }
 
-#charactersList {
+#resourcesList {
   padding-inline-start: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
 }
 
-.character {
+.resource {
   list-style-type: none;
   background-color: #eaeaea;
   border-radius: 3px;
@@ -152,23 +152,23 @@ manifold-init {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
-    "name image"
-    "house image";
+    "resourceName image"
+    "link image";
   text-align: left;
 }
 
-.character > h2 {
-  grid-area: name;
+.resource > h2 {
+  grid-area: resourceName;
   margin-bottom: 0px;
 }
 
-.character > p {
-  grid-area: house;
+.resource > p {
+  grid-area: link;
   margin: 0;
   margin-top: -18px;
 }
 
-.character > img {
+.resource > img {
   max-height: 100px;
   grid-area: image;
 }

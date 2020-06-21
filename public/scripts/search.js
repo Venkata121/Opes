@@ -1,41 +1,41 @@
-const charactersList = document.getElementById('charactersList');
+const resourcesList = document.getElementById('resourcesList');
 const searchBar = document.getElementById('searchBar');
-let hpCharacters = [];
+let freeresources = [];
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
 
-    const filteredCharacters = hpCharacters.filter((character) => {
+    const filteredResources = freeresources.filter((resource) => {
         return (
-            character.name.toLowerCase().includes(searchString) ||
-            character.house.toLowerCase().includes(searchString)
+            resource.name.toLowerCase().includes(searchString) ||
+            resource.house.toLowerCase().includes(searchString)
         );
     });
-    displayCharacters(filteredCharacters);
+    displayResources(filteredResources);
 });
 
-const loadCharacters = async () => {
+const loadResources = async () => {
     try {
         const res = await fetch('./free-resources_data.json');
-        hpCharacters = await res.json();
-        displayCharacters(hpCharacters);
+        freeresources = await res.json();
+        displayResources(freeresources);
     } catch (err) {
         console.error(err);
     }
 };
 
-const displayCharacters = (characters) => {
-    const htmlString = characters
-        .map((character) => {
+const displayResources = (resources) => {
+    const htmlString = resources
+        .map((resource) => {
             return `
             <li class="card card-body">
-                <h2 class="card-title">${character.name}</h2>
-                <p class="card-subtitle">House: ${character.house}</p>
+                <h2 class="card-title">${resource.resourceName}</h2>
+                <p class="card-subtitle">Link: ${resource.link}</p>
             </li>
         `;
         })
         .join('');
-    charactersList.innerHTML = htmlString;
+    resourcesList.innerHTML = htmlString;
 };
 
-loadCharacters();
+loadResources();
