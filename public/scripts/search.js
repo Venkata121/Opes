@@ -28,8 +28,8 @@ const displayCharacters = (characters) => {
     const htmlString = characters
         .map((character) => {
             return `
-            <li class="character">
-                <h2>${character.name}</h2>
+            <li class="card card-body">
+                <h2 class="card-title">${character.name}</h2>
                 <p>House: ${character.house}</p>
                 <img src="${character.image}"></img>
             </li>
