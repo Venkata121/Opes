@@ -8,7 +8,7 @@ searchBar.addEventListener('keyup', (e) => {
     const filteredResources = freeResources.filter((resource) => {
         return (
             resource.name.toLowerCase().includes(searchString) ||
-            resource.house.toLowerCase().includes(searchString)
+            resource.link.toLowerCase().includes(searchString)
         );
     });
     displayResources(filteredResources);
@@ -24,18 +24,18 @@ const loadResources = async () => {
     }
 };
 
-const displayResources = (characters) => {
-    const htmlString = characters
-        .map((character) => {
+const displayResources = (resources) => {
+    const htmlString = resources
+        .map((resource) => {
             return `
-            <li class="card card-body">
-                <h2 class="card-title">${character.name}</h2>
-                <p class="card-subtitle">House: ${character.house}</p>
+            <li class="card card-body customlistyle">
+                <h5 class="card-title">${resource.name}</h5>
+                <a href="${resource.link}" class="btn btn-primary">LINKY DINKY</a>
             </li>
         `;
         })
         .join('');
-    charactersList.innerHTML = htmlString;
+    resourcesList.innerHTML = htmlString;
 };
 
-loadCharacters();
+loadResources();

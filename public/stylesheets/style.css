@@ -196,3 +196,7 @@ manifold-init {
 .alertcustomwidth {
   display:inline-block;
 }
+
+.customlistyle {
+  float: left;
+}
