@@ -1,6 +1,6 @@
 # Resource Bank
 
-[![sarthaktexas](https://circleci.com/gh/sarthaktexas/login.svg?style=svg&circle-token=acf16620d0cd222e6fdf325c847e9eb18eb76ed2)](https://app.circleci.com/pipelines/github/sarthaktexas/login)
+[![sarthaktexas](https://circleci.com/gh/sarthaktexas/resourcebank.svg?style=svg&circle-token=acf16620d0cd222e6fdf325c847e9eb18eb76ed2)](https://app.circleci.com/pipelines/github/sarthaktexas/resourcebank)
 
 ## 🌎 Languages
 
