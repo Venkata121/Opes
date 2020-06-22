@@ -192,3 +192,8 @@ manifold-init {
   top: 7px;
   right: 15px;
 }
+
+/* Editing Bootstrap cause I'm a boss */
+.alertcustomwidth {
+  display:inline-block;
+}
