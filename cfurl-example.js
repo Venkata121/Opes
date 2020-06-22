@@ -124,5 +124,3 @@ var qbwhurl = s3.getSignedUrl("getObject", {
   Key: "secured/QB/WorldHistory/index.html",
   Expires: 300
 });
-
-export { colorCode };
