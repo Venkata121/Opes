@@ -199,4 +199,9 @@ manifold-init {
 
 .customlistyle {
   float: left;
+  margin: 10px;
 }
+
+/* .displayBlockCustom {
+  display: block;
+} */
