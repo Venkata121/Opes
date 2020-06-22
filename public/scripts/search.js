@@ -1,7 +1,3 @@
-// Cloudfront PreSigned URL Feature
-
-
-
 // Search Bar Feature
 const resourcesList = document.getElementById('resourcesList');
 const searchBar = document.getElementById('searchBar');
