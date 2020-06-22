@@ -127,10 +127,6 @@ manifold-init {
   font-family: "Inter", sans-serif;
 }
 
-.securedResourcesContainer {
-  display: block;
-}
-
 /* Search Bar */
 
 .searchContainer {
@@ -141,14 +137,14 @@ manifold-init {
   float: left;
 }
 
-#resourcesList {
+#charactersList {
   padding-inline-start: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 20px;
 }
 
-.resource {
+.character {
   list-style-type: none;
   background-color: #eaeaea;
   border-radius: 3px;
@@ -156,23 +152,23 @@ manifold-init {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-areas:
-    "resourceName image"
-    "link image";
+    "name image"
+    "house image";
   text-align: left;
 }
 
-.resource > h2 {
-  grid-area: resourceName;
+.character > h2 {
+  grid-area: name;
   margin-bottom: 0px;
 }
 
-.resource > p {
-  grid-area: link;
+.character > p {
+  grid-area: house;
   margin: 0;
   margin-top: -18px;
 }
 
-.resource > img {
+.character > img {
   max-height: 100px;
   grid-area: image;
 }

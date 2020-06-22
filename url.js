@@ -1,26 +1,9 @@
-// This is a template to generate cloudfront presigned urls
-// Used in ./routes/index.js
-
-const AWS = require("aws-sdk");
-const cloudFront = new AWS.CloudFront.Signer(
-    process.env.CLOUDFRONT_KEY_PAIR_ID,
-    privateKey
-  );
-
-const policy = JSON.stringify({
-    Statement: [
-      {
-        Resource: "http*://d2d3mdelw3jx6o.cloudfront.net/*", // http* => http and https
-        Condition: {
-          DateLessThan: {
-            "AWS:EpochTime":
-              Math.floor(new Date().getTime() / 1000) + 60 * 60 * 1 // Current Time in UTC + time in seconds, (60 * 60 * 1 = 1 hour)
-          }
-        }
-      }
-    ]
-  });
-
+var AWS = require("aws-sdk");
+var s3 = new AWS.S3({
+  apiVersion: "2006-03-01",
+  signatureVersion: "v4",
+  region: "us-east-2"
+});
 var qbahurl = s3.getSignedUrl("getObject", {
   Bucket: "sarthakcdn",
   Key: "secured/QB/ArtHistory/index.html",
@@ -142,8 +125,4 @@ var qbwhurl = s3.getSignedUrl("getObject", {
   Expires: 300
 });
 
-var qbahurl = cloudFront.getSignedUrl({
-    url:
-      "https://d2d3mdelw3jx6o.cloudfront.net/secured/QB/ArtHistory/index.html",
-    policy: policy
-  });
+export { colorCode };

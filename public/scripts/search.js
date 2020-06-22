@@ -1,42 +1,41 @@
-// Search Bar Feature
-const resourcesList = document.getElementById('resourcesList');
+const charactersList = document.getElementById('charactersList');
 const searchBar = document.getElementById('searchBar');
-let freeresources = [];
+let hpCharacters = [];
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
 
-    const filteredResources = freeresources.filter((resource) => {
+    const filteredCharacters = hpCharacters.filter((character) => {
         return (
-            resource.name.toLowerCase().includes(searchString) ||
-            resource.house.toLowerCase().includes(searchString)
+            character.name.toLowerCase().includes(searchString) ||
+            character.house.toLowerCase().includes(searchString)
         );
     });
-    displayResources(filteredResources);
+    displayCharacters(filteredCharacters);
 });
 
-const loadResources = async () => {
+const loadCharacters = async () => {
     try {
         const res = await fetch('./free-resources_data.json');
-        freeresources = await res.json();
-        displayResources(freeresources);
+        hpCharacters = await res.json();
+        displayCharacters(hpCharacters);
     } catch (err) {
         console.error(err);
     }
 };
 
-const displayResources = (resources) => {
-    const htmlString = resources
-        .map((resource) => {
+const displayCharacters = (characters) => {
+    const htmlString = characters
+        .map((character) => {
             return `
             <li class="card card-body">
-                <h5 class="card-title">${resource.resourceName}</h5>
-                <a href="${resource.link}" class="btn btn-primary">LINKY DINKY</a>
+                <h2 class="card-title">${character.name}</h2>
+                <p class="card-subtitle">House: ${character.house}</p>
             </li>
         `;
         })
         .join('');
-    resourcesList.innerHTML = htmlString;
+    charactersList.innerHTML = htmlString;
 };
 
-loadResources();
+loadCharacters();
