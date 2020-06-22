@@ -1,30 +1,30 @@
-const charactersList = document.getElementById('charactersList');
+const resourcesList = document.getElementById('resourcesList');
 const searchBar = document.getElementById('searchBar');
-let hpCharacters = [];
+let freeResources = [];
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
 
-    const filteredCharacters = hpCharacters.filter((character) => {
+    const filteredResources = freeResources.filter((resource) => {
         return (
-            character.name.toLowerCase().includes(searchString) ||
-            character.house.toLowerCase().includes(searchString)
+            resource.name.toLowerCase().includes(searchString) ||
+            resource.house.toLowerCase().includes(searchString)
         );
     });
-    displayCharacters(filteredCharacters);
+    displayResources(filteredResources);
 });
 
-const loadCharacters = async () => {
+const loadResources = async () => {
     try {
-        const res = await fetch('./free-resources_data.json');
-        hpCharacters = await res.json();
-        displayCharacters(hpCharacters);
+        const res = await fetch('/free-resources_data.json');
+        freeResources = await res.json();
+        displayResources(freeResources);
     } catch (err) {
         console.error(err);
     }
 };
 
-const displayCharacters = (characters) => {
+const displayResources = (characters) => {
     const htmlString = characters
         .map((character) => {
             return `
