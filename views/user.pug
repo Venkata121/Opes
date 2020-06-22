@@ -1,7 +1,10 @@
 extends layout
 
 block content
-  .w3-card-4
-    h1 Welcome, #{user.displayName}!
-    h5 #{user.emails.value}
+  .w3-card-4.text-center
+    h4 Welcome, #{user.displayName}!
+    if user.nickname === 'sarthaktexas'
+      h5.text-primary You currently have premium. Welcome to the club!
+    else
+      h5.text-secondary While you don't have premium, you can enjoy our array of free resources
     img(src=user.picture)
