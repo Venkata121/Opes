@@ -25,9 +25,14 @@ html
     .topnav( role="navigation" )
       if locals.user
         h1.topnav.name Sarthak Mohanty
-        if user.nickname === "sarthaktexas"
+        if user.nickname === "sarthaktexas" || user.nickname === "vishaalsaatvik28" || user.nickname === "satvikprabhakar"
           a(href="/resources") Resources
           a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Yourself?
+          a(href="/user" id="profileDropDown") Profile
+          a(id="qsLogoutBtn" href="/logout") Log Out
+        else
+          a(href="/resources") Resources
+          a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
           a(href="/user" id="profileDropDown") Profile
           a(id="qsLogoutBtn" href="/logout") Log Out
       else
