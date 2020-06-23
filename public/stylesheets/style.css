@@ -197,6 +197,7 @@ manifold-init {
   display:inline-block;
 }
 
+/* This is for the Bootstrap cards */
 .customlistyle {
   float: left;
   margin: 10px;
