@@ -19,6 +19,8 @@ router.get("/", function(req, res, next) {
 /* GET debug page. */
 router.get("/debug", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
+  const testMetaData = req.user;
+  console.log(testMetaData)
   res.render("debug", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Debug"
@@ -311,16 +313,6 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     return result;
   }
   var SessionID = randomString(32, "#aA");
-
-  var fetch = require("node-fetch");
-
-  fetch("https://scibowldb.com/api/questions/random") // Call the fetch function passing the url of the API as a parameter
-    .then(function() {
-      console.log();
-    })
-    .catch(function() {
-      // This is where you run code if the server returns any errors
-    });
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
