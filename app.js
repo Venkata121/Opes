@@ -13,6 +13,8 @@ var userInViews = require("./lib/middleware/userInViews");
 var authRouter = require("./routes/auth");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var firebase = require('firebase');
+var firebaseui = require('firebaseui');
 
 dotenv.config();
 Sentry.init({
@@ -20,8 +22,8 @@ Sentry.init({
     "https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967"
 });
 
-// Configure S3
-var s3 = new AWS.S3({ apiVersion: "2006-03-01" });
+// Initialize the FirebaseUI Widget using Firebase.
+var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 // Configure Passport to use Auth0
 var strategy = new Auth0Strategy(
