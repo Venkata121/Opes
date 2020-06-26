@@ -12,7 +12,7 @@ dotenv.config();
 router.get(
   "/login",
   passport.authenticate("auth0", {
-    scope: "openid email profile metadata"
+    scope: "openid email profile app_metadata user_metadata"
   }),
   function(req, res) {
     res.redirect("/index.html");
