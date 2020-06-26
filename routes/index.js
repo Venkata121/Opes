@@ -18,10 +18,9 @@ router.get("/", function(req, res, next) {
 
 /* GET debug page. */
 router.get("/debug", secured(), function(req, res, next) {
-  const userProfile = req.user;
-  console.log(userProfile);
+  //const userProfile = req.user;
   res.render("debug", {
-    userProfile: JSON.stringify(userProfile, null, 2),
+    userProfile: JSON.stringify(req.user, null, 2),
     title: "Debug"
   });
 });
