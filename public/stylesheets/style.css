@@ -198,6 +198,6 @@ a.qblink:hover {
   margin: 10px;
 }
 
-/* .displayBlockCustom {
-  display: block;
-} */
+.customPadding {
+  padding-top: 650px;
+}

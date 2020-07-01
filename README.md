@@ -1,6 +1,7 @@
 # Resource Bank
 
 [![sarthaktexas](https://circleci.com/gh/sarthaktexas/resourcebank.svg?style=svg&circle-token=acf16620d0cd222e6fdf325c847e9eb18eb76ed2)](https://app.circleci.com/pipelines/github/sarthaktexas/resourcebank)
+![OnlineIndicator](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fshields.io)
 
 ## 🌎 Languages
 
