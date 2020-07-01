@@ -6,9 +6,15 @@ block content
     if error.status === 404
       h4 Error #{error.status}
       p Page not found. You're on the wrong page.
+    if error.status === 403
+      h4 Error #{error.status}
+      p Forbidden. You're not allowed to be here.
+    if error.status === 418
+      p I'm a teapot. I, the server, refuse to brew coffee because I am, permanently, a teapot. Since combined coffee/tea pot that is temporarily out of coffee should instead return 503.
     else
       h4 Error #{error.status}
       p This issue has been reported. If this keeps happening, text #[span Sarthak] directly.
+      p Usually this means Sarthak was working on this site and he broke something.
   //h1= message
   //h2= error.status
   //pre #{error.stack}
