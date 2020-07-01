@@ -30,9 +30,9 @@ const displayResources = (resources) => {
         .map((resource) => {
             return `
             <li class="card card-body customfloatleft">
-                <h6>${resource.subject}</h5>
+                <h6 class="text-warning">${resource.subject}</h5>
                 <h5 class="card-title">${resource.name}</h5>
-                <a href="${resource.link}" class="btn btn-primary">LINKY DINKY</a>
+                <a href="${resource.link}" class="btn btn-primary">Link</a>
             </li>
         `;
         })
