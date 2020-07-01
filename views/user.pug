@@ -2,14 +2,14 @@ extends layout
 
 block content
   .w3-card-4.text-center
-    if user.nickname === 'sarthaktexas' || user.nickname === 'vishaalsaatvik28' || user.nickname === 'satvikprabhakar'
+    if user._json["https://idkwhythathadtobethere/premium"] === true
       .alert.alert-danger.alert-dismissible.fade.show.alertcustomwidth.text-center(role='alert')
         p If there is any mention of snitching, you're account will be #[strong terminated] without further notice and will not be refunded.
         | #[strong Don't try me.]
         button.close(type='button' data-dismiss='alert' aria-label='Close')
           span(aria-hidden='true') &times;
     h4 Welcome, #{user.displayName}!
-    if user.nickname === 'sarthaktexas' || user.nickname === 'vishaalsaatvik28' || user.nickname === 'satvikprabhakar'
+    if user._json["https://idkwhythathadtobethere/premium"] === true
       h5.text-primary You currently have premium. Welcome to the club!
     else
       h5.text-secondary While you don't have premium, you can enjoy our array of free resources
