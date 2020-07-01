@@ -312,6 +312,8 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
   }
   var SessionID = randomString(32, "#aA");
 
+  console.log(SessionID);
+  
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
