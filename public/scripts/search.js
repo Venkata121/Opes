@@ -28,7 +28,7 @@ const displayResources = (resources) => {
     const htmlString = resources
         .map((resource) => {
             return `
-            <li class="card card-body customlistyle">
+            <li class="card card-body customfloatleft">
                 <h5 class="card-title">${resource.name}</h5>
                 <a href="${resource.link}" class="btn btn-primary">LINKY DINKY</a>
             </li>

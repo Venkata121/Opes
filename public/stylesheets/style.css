@@ -122,11 +122,6 @@ a.qblink:hover {
   font-family: "Inter", sans-serif;
 }
 
-manifold-init {
-  text-decoration: none;
-  font-family: "Inter", sans-serif;
-}
-
 /* Search Bar */
 
 .searchContainer {
@@ -198,7 +193,7 @@ manifold-init {
 }
 
 /* This is for the Bootstrap cards */
-.customlistyle {
+.customfloatleft {
   float: left;
   margin: 10px;
 }
