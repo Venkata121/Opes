@@ -7,6 +7,7 @@ searchBar.addEventListener('keyup', (e) => {
 
     const filteredResources = freeResources.filter((resource) => {
         return (
+            resource.subject.toLowerCase().includes(searchString) ||
             resource.name.toLowerCase().includes(searchString) ||
             resource.link.toLowerCase().includes(searchString)
         );
@@ -29,6 +30,7 @@ const displayResources = (resources) => {
         .map((resource) => {
             return `
             <li class="card card-body customfloatleft">
+                <h6>${resource.subject}</h5>
                 <h5 class="card-title">${resource.name}</h5>
                 <a href="${resource.link}" class="btn btn-primary">LINKY DINKY</a>
             </li>
