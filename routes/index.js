@@ -313,7 +313,7 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
   var SessionID = randomString(32, "#aA");
 
   console.log(SessionID);
-  
+
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
@@ -401,10 +401,6 @@ router.get("/shutdown", (req, res) => {
   setTimeout(() => {
     process.exit(0);
   }, 500);
-});
-
-router.get("/451", (req, res) => {
-   throw new Error("This is my fake error message");
 });
 
 module.exports = router;

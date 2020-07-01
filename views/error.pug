@@ -6,13 +6,14 @@ block content
     if error.status === 404
       h4 Error #{error.status}
       p Page not found. You're on the wrong page.
-    if error.status === 403
+    else if error.status === 403
       h4 Error #{error.status}
       p Forbidden. You're not allowed to be here.
-    if error.status === 418
+    else if error.status === 418
       h4 Error #{error.status}
       p I'm a teapot. I, the server, refuse to brew coffee because I am, permanently, a teapot. Since I'm a combined coffee/tea pot that is temporarily out of coffee, I should instead return 503.
-    if error.status === 451
+      p (The teacher's lounge coffee pot is getting refilled.)
+    else if error.status === 451
       h4 Error #{error.status}
       p Unavailable for Legal Reasons. This request may not be serviced in the Roman Province of Judea due to the Lex Julia Majestatis, which disallows access to resources hosted on servers deemed to be operated by the People's Front of Judea.
     else
