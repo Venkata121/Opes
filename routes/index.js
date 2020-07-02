@@ -377,4 +377,16 @@ router.get("/shutdown", (req, res) => {
   }, 500);
 });
 
+router.get("/privacy", function(req, res, next) {
+  res.render("privacy", {
+    title: "Privacy Policy"
+  });
+});
+
+router.get("/terms", function(req, res, next) {
+  res.render("terms", {
+    title: "Terms and Conditions"
+  });
+});
+
 module.exports = router;
