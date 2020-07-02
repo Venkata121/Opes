@@ -1,9 +1,3 @@
-// File: 
-// Link: fas fa-paperclip
-// Video:
-// Textbook:
-// 
-
 [
   {
     "icon": "fas fa-paperclip",
@@ -13,14 +7,14 @@
     "contributer": "sarthaktexas"
   },
   {
-    "icon": "fas fa-rocket",
+    "icon": "fas fa-video",
     "subject": "Human Geo Packets??",
     "name": "hii",
     "link": "hello",
     "contributer": "sarthaktexas"
   },
   {
-    "icon": "fas fa-asterisk",
+    "icon": "fas fa-book",
     "subject": "Human Geo Packets??",
     "name": "hii",
     "link": "hello",
