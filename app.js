@@ -141,20 +141,4 @@ app.use(function(err, req, res, next) {
   res.end(res.sentry + "\n");
 });
 
-// Set your secret key. Remember to switch to your live secret key in production!
-// See your keys here: https://dashboard.stripe.com/account/apikeys
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-
-app.post('/create-customer', async (req, res) => {
-  // Create a new customer object
-  const customer = await stripe.customers.create({
-    email: req.body.email,
-  });
-
-  // save the customer.id as stripeCustomerId
-  // in your database.
-
-  res.send({ customer });
-});
-
 module.exports = app;

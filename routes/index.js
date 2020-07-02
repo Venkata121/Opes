@@ -389,25 +389,4 @@ router.get("/terms", function(req, res, next) {
   });
 });
 
-router.get("/payment", function(req, res, next) {
-  const stripe = require("stripe")("sk_test_wFQvkrbExnBMOP5KD9rQEJTY");
-
-  const session = stripe.checkout.sessions.create({
-    payment_method_types: ["card"],
-    line_items: [
-      {
-        price: "{{PRICE_ID}}",
-        quantity: 1
-      }
-    ],
-    mode: "subscription",
-    success_url: "https://example.com/success?session_id={CHECKOUT_SESSION_ID}",
-    cancel_url: "https://example.com/cancel"
-  });
-
-  res.render("payment", {
-    title: "Payment"
-  });
-});
-
 module.exports = router;
