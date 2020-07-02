@@ -141,17 +141,20 @@ app.use(function(err, req, res, next) {
   res.end(res.sentry + "\n");
 });
 
-const stripe = require('stripe')('sk_test_wFQvkrbExnBMOP5KD9rQEJTY');
+// Set your secret key. Remember to switch to your live secret key in production!
+// See your keys here: https://dashboard.stripe.com/account/apikeys
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-const stripesession = stripe.checkout.sessions.create({
-  payment_method_types: ['card'],
-  line_items: [{
-    price: '{{PRICE_ID}}',
-    quantity: 1,
-  }],
-  mode: 'subscription',
-  success_url: 'https://rb.sarthakmohanty.me/success?session_id={CHECKOUT_SESSION_ID}',
-  cancel_url: 'https://rb.sarthakmohanty.me/',
+app.post('/create-customer', async (req, res) => {
+  // Create a new customer object
+  const customer = await stripe.customers.create({
+    email: req.body.email,
+  });
+
+  // save the customer.id as stripeCustomerId
+  // in your database.
+
+  res.send({ customer });
 });
 
 module.exports = app;

@@ -1,7 +1,13 @@
 extends layout
 
 block content
+  script(src="stripe.js" defer)
   .w3-card-4
-    h
+    head
+      title Checkout
+      script(src='https://js.stripe.com/v3/')
+      link(rel='stylesheet' href='StripeElements.css')
+
+    
 
   
