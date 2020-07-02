@@ -390,23 +390,21 @@ router.get("/terms", function(req, res, next) {
 });
 
 router.get("/payment", function(req, res, next) {
-  var Stripe = require("@stripe/stripe-js");
-  var stripe = Stripe("pk_test_JMhCM9X2PO2KydkUw8Cvz8wQ");
-  var checkoutButton = document.getElementById("checkout-button");
-  checkoutButton.addEventListener("click", function() {
-    stripe
-      .redirectToCheckout({
-        // Make the id field from the Checkout Session creation API response
-        // available to this file, so you can provide it as argument here
-        // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-        sessionId: "{{CHECKOUT_SESSION_ID}}"
-      })
-      .then(function(result) {
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `result.error.message`.
-      });
+  const stripe = require("stripe")("sk_test_wFQvkrbExnBMOP5KD9rQEJTY");
+
+  const session = stripe.checkout.sessions.create({
+    payment_method_types: ["card"],
+    line_items: [
+      {
+        price: "{{PRICE_ID}}",
+        quantity: 1
+      }
+    ],
+    mode: "subscription",
+    success_url: "https://example.com/success?session_id={CHECKOUT_SESSION_ID}",
+    cancel_url: "https://example.com/cancel"
   });
+
   res.render("payment", {
     title: "Payment"
   });
