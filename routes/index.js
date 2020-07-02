@@ -396,7 +396,7 @@ router.get("/payment", function(req, res, next) {
     payment_method_types: ["card"],
     line_items: [
       {
-        price: "10",
+        price: "{{PRICE_ID}}",
         quantity: 1
       }
     ],
