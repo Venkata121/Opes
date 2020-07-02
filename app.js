@@ -141,6 +141,17 @@ app.use(function(err, req, res, next) {
   res.end(res.sentry + "\n");
 });
 
+const stripe = require('stripe')('sk_test_wFQvkrbExnBMOP5KD9rQEJTY');
 
+const stripesession = stripe.checkout.sessions.create({
+  payment_method_types: ['card'],
+  line_items: [{
+    price: '{{PRICE_ID}}',
+    quantity: 1,
+  }],
+  mode: 'subscription',
+  success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
+  cancel_url: 'https://example.com/cancel',
+});
 
 module.exports = app;
