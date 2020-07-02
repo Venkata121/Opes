@@ -17,13 +17,14 @@
     "passport": "^0.4.1",
     "passport-auth0": "^1.3.3",
     "pug": "^3.0.0",
-    "aws-sdk": "^2.704.0",
-    "@sentry/node": "^5.18.0",
+    "aws-sdk": "^2.709.0",
+    "@sentry/node": "^5.19.0",
     "express-graphql": "^0.9.0",
-    "graphql": "^15.1.0",
+    "graphql": "^15.2.0",
     "node-fetch": "^2.6.0",
-    "firebase": "^7.15.4",
+    "firebase": "^7.15.5",
     "firebaseui": "^4.5.1",
-    "firebase-admin": "^8.12.1"
+    "firebase-admin": "^8.13.0",
+    "stripe": "^8.67.0"
   }
 }
