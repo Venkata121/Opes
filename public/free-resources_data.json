@@ -1,17 +1,26 @@
+// File: 
+// Link: fas fa-paperclip
+// Video:
+// Textbook:
+// 
+
 [
   {
+    "icon": "fas fa-paperclip",
     "subject": "Human Geography",
     "name": "Fundamentals of Human Geography",
     "link": "http://go.galegroup.com/ps/i.do?id=GALE%7CCX2062300014&v=2.1&u=oreg77062&it=r&p=GVRL&sw=w&asid=b0eefe921191e8464bb3891bbc4bbffd",
     "contributer": "sarthaktexas"
   },
   {
+    "icon": "fas fa-rocket",
     "subject": "Human Geo Packets??",
     "name": "hii",
     "link": "hello",
     "contributer": "sarthaktexas"
   },
   {
+    "icon": "fas fa-asterisk",
     "subject": "Human Geo Packets??",
     "name": "hii",
     "link": "hello",
