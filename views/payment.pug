@@ -2,15 +2,6 @@ extends layout
 
 block content
   .w3-card-4
-    script(src='https://js.stripe.com/v3/')
-    form#payment-form(action='/charge' method='post')
-      .form-row
-        label(for='card-element')
-        | Credit or debit card
-      #card-element
-      // A Stripe Element will be inserted here.
-      // Used to display form errors.
-      #card-errors(role='alert')
-    button Submit Payment
+    h
 
   

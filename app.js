@@ -150,8 +150,8 @@ const stripesession = stripe.checkout.sessions.create({
     quantity: 1,
   }],
   mode: 'subscription',
-  success_url: 'https://example.com/success?session_id={CHECKOUT_SESSION_ID}',
-  cancel_url: 'https://example.com/cancel',
+  success_url: 'https://rb.sarthakmohanty.me/success?session_id={CHECKOUT_SESSION_ID}',
+  cancel_url: 'https://rb.sarthakmohanty.me/',
 });
 
 module.exports = app;
