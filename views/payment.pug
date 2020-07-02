@@ -7,7 +7,13 @@ block content
       title Checkout
       script(src='https://js.stripe.com/v3/')
       link(rel='stylesheet' href='StripeElements.css')
+    body
+      form#subscription-form
+        #card-element.MyCardElement
+          // Elements will create input elements here
+        // We'll put the error messages in this element
+        #card-errors(role='alert')
+        button(type='submit') Subscribe
 
-    
 
-  
+
