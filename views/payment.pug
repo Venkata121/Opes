@@ -1,19 +1,22 @@
-extends layout
-
-block content
+.w3-card-4
+  link(rel='stylesheet' href='stylesheets/style.css')
+  link(rel='stylesheet' href='stylesheets/normalize.css')
+  link(rel='stylesheet' href='stylesheets/global.css')
+  script(src='https://js.stripe.com/v3/')
+  script(src='/script.js' defer)
+  
   script(src="stripe.js" defer)
-  .w3-card-4
-    head
-      title Checkout
-      script(src='https://js.stripe.com/v3/')
-      link(rel='stylesheet' href='StripeElements.css')
-    body
-      form#subscription-form
-        #card-element.MyCardElement
-          // Elements will create input elements here
-        // We'll put the error messages in this element
-        #card-errors(role='alert')
-        button(type='submit') Subscribe
-
-
-
+  
+  form#signup-form
+          .w-full.mb-2
+            //
+              <label
+              class="block text-gray-500 font-bold mb-2"
+              for="inline-full-name"
+              >
+              Email address
+              </label>
+            input#email.appearance-none.border-2.border-gray-200.rounded-md.w-full.py-2.px-4.text-gray-700.leading-tight(class='focus:outline-none focus:bg-white focus:border-pasha' type='text' placeholder='Email address' required='')
+          button#email-submit.w-full.bg-pasha.rounded-md.text-white.font-light.py-2.px-4.rounded(class='hover:bg-red-200 hover:shadow-outline hover:text-pasha hover:border hover:border-black focus:shadow-outline focus:bg-white focus:text-pasha' type='submit')
+            #loading.hidden Signing up...
+            span#button-text Sign up

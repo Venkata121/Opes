@@ -389,4 +389,11 @@ router.get("/terms", function(req, res, next) {
   });
 });
 
+/* GET payment page. */
+router.get("/payment", function(req, res, next) {
+  res.render("payment", {
+    title: "Payment"
+  });
+});
+
 module.exports = router;
