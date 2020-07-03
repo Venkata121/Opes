@@ -396,4 +396,11 @@ router.get("/payment", function(req, res, next) {
   });
 });
 
+/* GET account page. */
+router.get("/account", function(req, res, next) {
+  res.render("account", {
+    title: "Account"
+  });
+});
+
 module.exports = router;
