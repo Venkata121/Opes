@@ -403,4 +403,11 @@ router.get("/account", function(req, res, next) {
   });
 });
 
+/* GET prices page. */
+router.get("/prices", function(req, res, next) {
+  res.render("prices", {
+    title: "prices"
+  });
+});
+
 module.exports = router;
