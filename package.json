@@ -19,18 +19,7 @@
     "pug": "^3.0.0",
     "aws-sdk": "^2.709.0",
     "@sentry/node": "^5.19.0",
-    "express-graphql": "^0.9.0",
-    "graphql": "^15.2.0",
     "node-fetch": "^2.6.0",
-    "firebase": "^7.15.5",
-    "firebaseui": "^4.5.1",
-    "firebase-admin": "^8.13.0",
-    "stripe": "^8.67.0",
-    "@stripe/stripe-js": "^1.6.0",
-    "concurrently": "^5.2.0",
-    "autoprefixer": "^9.8.4",
-    "body-parser": "^1.19.0",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.4.5"
+    "stripe": "^8.67.0"
   }
 }

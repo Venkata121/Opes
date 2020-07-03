@@ -390,23 +390,9 @@ router.get("/terms", function(req, res, next) {
 });
 
 /* GET payment page. */
-router.get("/payment", function(req, res, next) {
-  res.render("payment", {
-    title: "Payment"
-  });
-});
-
-/* GET account page. */
-router.get("/account", function(req, res, next) {
-  res.render("account", {
-    title: "Account"
-  });
-});
-
-/* GET prices page. */
-router.get("/prices", function(req, res, next) {
-  res.render("prices", {
-    title: "prices"
+router.get("/pay", function(req, res, next) {
+  res.render("pay", {
+    title: "Pay"
   });
 });
 
