@@ -396,4 +396,11 @@ router.get("/pay", function(req, res, next) {
   });
 });
 
+/* GET payment page. */
+router.get("/discount", function(req, res, next) {
+  res.render("discount", {
+    title: "Discount"
+  });
+});
+
 module.exports = router;
