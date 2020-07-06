@@ -1,16 +1,17 @@
 extends layout
 
 block content
-  .w3-card-4.text-center
-    //.alert.alert-warning.alert-dismissible.fade.show.alertcustomwidth(role='alert')
-      strong Holy Guacamole!
-      |  NODE_ENV set to development, PROD features not active.
-      button.close(type='button' data-dismiss='alert' aria-label='Close')
-        span(aria-hidden='true') &times;
-    .sessionID
-      p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
-      h4 Session ID: #[code #{SessionID}]
-    br
-    +resourcesnormal
-    if user._json["https://idkwhythathadtobethere/premium"] === true
-      +resourcessecured
+  if locals.user
+    .w3-card-4.text-center
+      //.alert.alert-warning.alert-dismissible.fade.show.alertcustomwidth(role='alert')
+        strong Holy Guacamole!
+        |  NODE_ENV set to development, PROD features not active.
+        button.close(type='button' data-dismiss='alert' aria-label='Close')
+          span(aria-hidden='true') &times;
+      .sessionID
+        p If you just clicked the back button, remember to wait till your session ID has changed #[em before] clicking any links, otherwise, you will get a Access Denied XML Error.
+        h4 Session ID: #[code #{SessionID}]
+      br
+      +resourcesnormal
+      if user._json["https://idkwhythathadtobethere/premium"] === true
+        +resourcessecured
