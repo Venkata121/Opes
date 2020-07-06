@@ -10,8 +10,7 @@ block content
           span(aria-hidden='true') &times;
     h4 Welcome, #{user.displayName}!
     h5 Your username is #[.text-success #{user.nickname}]
-    .text-success
-      #{user.nickname}
+    p Keep this, you have to enter this when you pay or request a discount.
     if user._json["https://idkwhythathadtobethere/premium"] === true
       h5.text-primary You currently have premium. Welcome to the club!
     else
