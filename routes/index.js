@@ -70,10 +70,11 @@ router.get("/resources", secured(), function(req, res, next) {
   }
   var SessionID = randomString(32, "#aA");
 
+  console.log(req.user._json["email"] + "a");
   console.log(SessionID);
 
   const cdnnamespace = "https://cdn.sarthakmohanty.me/secured";
-
+  
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",

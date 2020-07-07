@@ -5,6 +5,7 @@ var dotenv = require("dotenv");
 var util = require("util");
 var url = require("url");
 var querystring = require("querystring");
+var Sentry = require("@sentry/node");
 
 dotenv.config();
 
@@ -15,6 +16,9 @@ router.get(
     scope: "openid email profile"
   }),
   function(req, res) {
+    Sentry.configureScope(function(scope) {
+      scope.setUser({ email: req.user._json["https://idkwhythathadtobethere/premium"] });
+    });
     res.redirect("/index.html");
   }
 );
