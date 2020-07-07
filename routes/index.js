@@ -72,207 +72,207 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     ]
   });
 
-//   var qbahurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/ArtHistory/index.html",
-//     policy: policy
-//   });
-//   var qbburl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Biology/index.html",
-//     policy: policy
-//   });
-//   var qbcbcurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/CalcBC/index.html",
-//     policy: policy
-//   });
-//   var qbchemurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Chemistry/index.html",
-//     policy: policy
-//   });
-//   var qbcgovurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/CompGov/index.html",
-//     policy: policy
-//   });
-//   var qbcsurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/CompSci/index.html",
-//     policy: policy
-//   });
-//   var qbcsaurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/CompSciA/index.html",
-//     policy: policy
-//   });
-//   var qbelaurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/EnglishLang/index.html",
-//     policy: policy
-//   });
-//   var qbeliurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/EnglishLit/index.html",
-//     policy: policy
-//   });
-//   var qbesurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/EnvSci/index.html",
-//     policy: policy
-//   });
-//   var qbeuurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Euro/index.html",
-//     policy: policy
-//   });
-//   var qbhgurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/HumanGeo/index.html",
-//     policy: policy
-//   });
-//   var qbmaurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Macro/index.html",
-//     policy: policy
-//   });
-//   var qbmiurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Micro/index.html",
-//     policy: policy
-//   });
-//   var qbmturl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/MusicTheory/index.html",
-//     policy: policy
-//   });
-//   var qbp1url = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Physics1/index.html",
-//     policy: policy
-//   });
-//   var qbp2url = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Physics2/index.html",
-//     policy: policy
-//   });
-//   var qbpcemurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/PhysicsCEM/index.html",
-//     policy: policy
-//   });
-//   var qbpcmurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/PhysicsCMech/index.html",
-//     policy: policy
-//   });
-//   var qbpsurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Psychology/index.html",
-//     policy: policy
-//   });
-//   var qbsturl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/Statistics/index.html",
-//     policy: policy
-//   });
-//   var qbusgurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/USGov/index.html",
-//     policy: policy
-//   });
-//   var qbushurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/USHistory/index.html",
-//     policy: policy
-//   });
-//   var qbwhurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/QB/WorldHistory/index.html",
-//     policy: policy
-//   });
+  //   var qbahurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/ArtHistory/index.html",
+  //     policy: policy
+  //   });
+  //   var qbburl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Biology/index.html",
+  //     policy: policy
+  //   });
+  //   var qbcbcurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/CalcBC/index.html",
+  //     policy: policy
+  //   });
+  //   var qbchemurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Chemistry/index.html",
+  //     policy: policy
+  //   });
+  //   var qbcgovurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/CompGov/index.html",
+  //     policy: policy
+  //   });
+  //   var qbcsurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/CompSci/index.html",
+  //     policy: policy
+  //   });
+  //   var qbcsaurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/CompSciA/index.html",
+  //     policy: policy
+  //   });
+  //   var qbelaurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/EnglishLang/index.html",
+  //     policy: policy
+  //   });
+  //   var qbeliurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/EnglishLit/index.html",
+  //     policy: policy
+  //   });
+  //   var qbesurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/EnvSci/index.html",
+  //     policy: policy
+  //   });
+  //   var qbeuurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Euro/index.html",
+  //     policy: policy
+  //   });
+  //   var qbhgurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/HumanGeo/index.html",
+  //     policy: policy
+  //   });
+  //   var qbmaurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Macro/index.html",
+  //     policy: policy
+  //   });
+  //   var qbmiurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Micro/index.html",
+  //     policy: policy
+  //   });
+  //   var qbmturl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/MusicTheory/index.html",
+  //     policy: policy
+  //   });
+  //   var qbp1url = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Physics1/index.html",
+  //     policy: policy
+  //   });
+  //   var qbp2url = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Physics2/index.html",
+  //     policy: policy
+  //   });
+  //   var qbpcemurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/PhysicsCEM/index.html",
+  //     policy: policy
+  //   });
+  //   var qbpcmurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/PhysicsCMech/index.html",
+  //     policy: policy
+  //   });
+  //   var qbpsurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Psychology/index.html",
+  //     policy: policy
+  //   });
+  //   var qbsturl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/Statistics/index.html",
+  //     policy: policy
+  //   });
+  //   var qbusgurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/USGov/index.html",
+  //     policy: policy
+  //   });
+  //   var qbushurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/USHistory/index.html",
+  //     policy: policy
+  //   });
+  //   var qbwhurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/QB/WorldHistory/index.html",
+  //     policy: policy
+  //   });
 
-//   // PERSONAL PROGRESS CHECK FEATURE
+  //   // PERSONAL PROGRESS CHECK FEATURE
 
-//   var ppcahurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/ArtHistory/index.html",
-//     policy: policy
-//   });
-//   var ppcburl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Biology/index.html",
-//     policy: policy
-//   });
-//   var ppccbcurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/CalcBC/index.html",
-//     policy: policy
-//   });
-//   var ppcchemurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Chemistry/index.html",
-//     policy: policy
-//   });
-//   var ppccgovurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/CompGov/index.html",
-//     policy: policy
-//   });
-//   var ppccsurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/CompSci/index.html",
-//     policy: policy
-//   });
-//   var ppccsaurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/CompSciA/index.html",
-//     policy: policy
-//   });
-//   var ppcelaurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/EnglishLang/index.html",
-//     policy: policy
-//   });
-//   var ppceliurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/EnglishLit/index.html",
-//     policy: policy
-//   });
-//   var ppcesurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/EnvSci/index.html",
-//     policy: policy
-//   });
-//   var ppceuurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Euro/index.html",
-//     policy: policy
-//   });
-//   var ppchgurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/HumanGeo/index.html",
-//     policy: policy
-//   });
-//   var ppcmaurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Macro/index.html",
-//     policy: policy
-//   });
-//   var ppcmiurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Micro/index.html",
-//     policy: policy
-//   });
-//   var ppcmturl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/MusicTheory/index.html",
-//     policy: policy
-//   });
-//   var ppcp1url = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Physics1/index.html",
-//     policy: policy
-//   });
-//   var ppcp2url = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Physics2/index.html",
-//     policy: policy
-//   });
-//   var ppcpcemurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/PhysicsCEM/index.html",
-//     policy: policy
-//   });
-//   var ppcpcmurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/PhysicsCMech/index.html",
-//     policy: policy
-//   });
-//   var ppcpsurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Psychology/index.html",
-//     policy: policy
-//   });
-//   var ppcsturl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/Statistics/index.html",
-//     policy: policy
-//   });
-//   var ppcusgurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/USGov/index.html",
-//     policy: policy
-//   });
-//   var ppcushurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/USHistory/index.html",
-//     policy: policy
-//   });
-//   var ppcwhurl = cloudFront.getSignedUrl({
-//     url: "https://cdn.sarthakmohanty.me/secured/PPC/WorldHistory/index.html",
-//     policy: policy
-//   });
-  
+  //   var ppcahurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/ArtHistory/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcburl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Biology/index.html",
+  //     policy: policy
+  //   });
+  //   var ppccbcurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/CalcBC/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcchemurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Chemistry/index.html",
+  //     policy: policy
+  //   });
+  //   var ppccgovurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/CompGov/index.html",
+  //     policy: policy
+  //   });
+  //   var ppccsurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/CompSci/index.html",
+  //     policy: policy
+  //   });
+  //   var ppccsaurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/CompSciA/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcelaurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/EnglishLang/index.html",
+  //     policy: policy
+  //   });
+  //   var ppceliurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/EnglishLit/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcesurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/EnvSci/index.html",
+  //     policy: policy
+  //   });
+  //   var ppceuurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Euro/index.html",
+  //     policy: policy
+  //   });
+  //   var ppchgurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/HumanGeo/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcmaurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Macro/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcmiurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Micro/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcmturl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/MusicTheory/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcp1url = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Physics1/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcp2url = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Physics2/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcpcemurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/PhysicsCEM/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcpcmurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/PhysicsCMech/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcpsurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Psychology/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcsturl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/Statistics/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcusgurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/USGov/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcushurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/USHistory/index.html",
+  //     policy: policy
+  //   });
+  //   var ppcwhurl = cloudFront.getSignedUrl({
+  //     url: "https://cdn.sarthakmohanty.me/secured/PPC/WorldHistory/index.html",
+  //     policy: policy
+  //   });
+
   var authpage = cloudFront.getSignedUrl({
     url: "https://cdn.sarthakmohanty.me/index.html",
     policy: policy
-  })
-  
+  });
+
   function randomString(length, chars) {
     var mask = "";
     if (chars.indexOf("a") > -1) mask += "abcdefghijklmnopqrstuvwxyz";
@@ -287,8 +287,8 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
   var SessionID = randomString(32, "#aA");
 
   console.log(SessionID);
-  
-  const cdnnamespace = "https://cdn.sarthakmohanty.me/secured"
+
+  const cdnnamespace = "https://cdn.sarthakmohanty.me/secured";
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
