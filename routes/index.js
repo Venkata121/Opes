@@ -69,17 +69,31 @@ router.get("/resources", secured(), function(req, res, next) {
   }
   var SessionID = randomString(32, "#aA");
 
-  function log(message) {
-    console.log(message);
-    fs.writeFileSync("./output.txt");
-  }
-  console.log(
-    req.user._json["email"] +
+  var date = Date.now();
+
+  // function log(message) {
+  //   console.log(message);
+  //   fs.writeFileSync("./output.txt");
+  // }
+  fs.writeFile('helloworld.txt', 'Hello World!', function (err) {
+  if (err) return console.log(err);
+  console.log(date +
+      ": " +
+      req.user._json["email"] +
       "-" +
       req.user._json["https://idkwhythathadtobethere/premium"] +
       ": " +
-      SessionID
-  );
+      SessionID);
+});
+  // log(
+  //   date +
+  //     ": " +
+  //     req.user._json["email"] +
+  //     "-" +
+  //     req.user._json["https://idkwhythathadtobethere/premium"] +
+  //     ": " +
+  //     SessionID
+  // );
 
   const cdnnamespace = "https://cdn.sarthakmohanty.me/secured";
 
