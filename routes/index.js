@@ -26,8 +26,6 @@ router.get("/resources", secured(), function(req, res, next) {
   
   // QUESTION BANK FEATURE
   
-  console.log(process.env.CLOUDFRONT_PRIVATE_KEY)
-  
   var AWS = require("aws-sdk");
   const cloudFront = new AWS.CloudFront.Signer(
     process.env.CLOUDFRONT_KEY_PAIR_ID,
@@ -70,8 +68,7 @@ router.get("/resources", secured(), function(req, res, next) {
   }
   var SessionID = randomString(32, "#aA");
 
-  console.log(req.user._json["email"] + "a");
-  console.log(SessionID);
+  console.log(req.user._json["email"] + "-" + req.user._json["https://idkwhythathadtobethere/premium"] + ": " + SessionID);
 
   const cdnnamespace = "https://cdn.sarthakmohanty.me/secured";
   
