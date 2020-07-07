@@ -30,5 +30,6 @@
 - File: fas fa-file
 - Link: fas fa-paperclip
 - Video: fas fa-video
+- Quizlet: fas fa-shapes
 - Textbook: fas fa-book
 - Top-Level Resource: fas fa-star

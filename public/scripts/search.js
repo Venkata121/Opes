@@ -7,6 +7,7 @@ searchBar.addEventListener("keyup", e => {
 
   const filteredResources = freeResources.filter(resource => {
     return (
+      resource.icon.toLowerCase().includes(searchString) ||
       resource.subject.toLowerCase().includes(searchString) ||
       resource.name.toLowerCase().includes(searchString) ||
       resource.link.toLowerCase().includes(searchString)
