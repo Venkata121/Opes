@@ -1,7 +1,8 @@
 mixin resourcessecured
   .customPadding
     script.
-      window.open(authpage, '_blank');
+      authpage="#{authpage}";
+      window.open(authpage, '_blank', 'noopener, noreferrer');
     h1 Secured Resources
     a(href=authpage) Authentication Page
     // QB Links
