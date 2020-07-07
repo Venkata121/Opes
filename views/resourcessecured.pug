@@ -1,11 +1,7 @@
 mixin resourcessecured
   .customPadding
-    //script.
-      authpageencoded="#{authpage}";
-      var authpagedecoded = authpageencoded.replace(/&amp;/g, '&');
-      window.open(authpagedecoded, '_blank', 'noopener, noreferrer');
     h1 Secured Resources
-    a(href=authpage) Authentication Page
+    a(href=authpage) Authentication Page (Click here first!)
     // QB Links
     h3 Question Banks
     a(href=cdnnamespace+"/QB/ArtHistory/index.html") Art History 
