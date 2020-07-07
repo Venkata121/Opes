@@ -1,6 +1,18 @@
 extends layout
 
 block content
+  script(src='https://browser.sentry-cdn.com/5.19.0/bundle.min.js' integrity='sha384-edPCPWtQrj57nipnV3wt78Frrb12XdZsyMbmpIKZ9zZRi4uAxNWiC6S8xtGCqwDG' crossorigin='anonymous')
+  script.
+    Sentry.init({
+        dsn: 'https://e7746484c4964a5ea536eea5f605f5d4@o406461.ingest.sentry.io/5273967',
+        beforeSend(event, hint) {
+          // Check if it is an exception, and if so, show the report dialog
+          if (event.exception) {
+            Sentry.showReportDialog({ eventId: event.event_id });
+          }
+          return event;
+        }
+      });
   .text-center
     img(src="https://cdn.glitch.com/8a4d5283-c9f0-4cc9-9cb0-ff953383dacc%2Frush-7.svg?v=1592637469594" width="500px")
     if error.status === 404

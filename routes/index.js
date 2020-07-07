@@ -3,6 +3,7 @@ var secured = require("../lib/middleware/secured");
 var router = express.Router();
 var AWS = require("aws-sdk");
 var pug = require("pug");
+var fs = require("fs");
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
@@ -23,9 +24,9 @@ router.get("/debug", secured(), function(req, res, next) {
 /* GET resources page. */
 router.get("/resources", secured(), function(req, res, next) {
   const { _raw, _json, ...userProfile } = req.user;
-  
+
   // QUESTION BANK FEATURE
-  
+
   var AWS = require("aws-sdk");
   const cloudFront = new AWS.CloudFront.Signer(
     process.env.CLOUDFRONT_KEY_PAIR_ID,
@@ -47,14 +48,14 @@ router.get("/resources", secured(), function(req, res, next) {
   });
 
   // AUTH PAGE FEATURE
-  
+
   var authpage = cloudFront.getSignedUrl({
     url: "https://cdn.sarthakmohanty.me/index.html",
     policy: policy
   });
 
   // SESSION ID FEATURE
-  
+
   function randomString(length, chars) {
     var mask = "";
     if (chars.indexOf("a") > -1) mask += "abcdefghijklmnopqrstuvwxyz";
@@ -68,10 +69,20 @@ router.get("/resources", secured(), function(req, res, next) {
   }
   var SessionID = randomString(32, "#aA");
 
-  console.log(req.user._json["email"] + "-" + req.user._json["https://idkwhythathadtobethere/premium"] + ": " + SessionID);
+  function log(message) {
+    console.log(message);
+    fs.writeFileSync("./output.txt");
+  }
+  console.log(
+    req.user._json["email"] +
+      "-" +
+      req.user._json["https://idkwhythathadtobethere/premium"] +
+      ": " +
+      SessionID
+  );
 
   const cdnnamespace = "https://cdn.sarthakmohanty.me/secured";
-  
+
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
