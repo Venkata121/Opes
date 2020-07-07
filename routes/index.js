@@ -272,7 +272,7 @@ ODVirisnt8NMcWirxTWVd/uMfbOiB3Xt3g3LEI4L9bUtUJ76t7lR
     url: "https://cdn.sarthakmohanty.me/secured/PPC/WorldHistory/index.html",
     policy: policy
   });
-
+  
   function randomString(length, chars) {
     var mask = "";
     if (chars.indexOf("a") > -1) mask += "abcdefghijklmnopqrstuvwxyz";
