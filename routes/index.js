@@ -2,11 +2,6 @@ var express = require("express");
 var secured = require("../lib/middleware/secured");
 var router = express.Router();
 var AWS = require("aws-sdk");
-var s3 = new AWS.S3({
-  apiVersion: "2006-03-01",
-  signatureVersion: "v4",
-  region: "us-east-2"
-});
 var pug = require("pug");
 
 /* GET home page. */
