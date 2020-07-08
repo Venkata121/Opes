@@ -89,7 +89,7 @@ router.get("/resources", secured(), function(req, res, next) {
     console.log(log);
   });
   
-  console.log(fs.readFileSync("output.txt"))
+  console.log(fs.readFileSync("output.txt").toString())
   
   // log(
   //   date +
