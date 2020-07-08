@@ -67,7 +67,7 @@ router.get("/resources", secured(), function(req, res, next) {
       result += mask[Math.floor(Math.random() * mask.length)];
     return result;
   }
-  var SessionID = randomString(32, "#aA");
+  const SessionID = randomString(32, "#aA");
 
   var date = Date.now();
 
@@ -75,7 +75,7 @@ router.get("/resources", secured(), function(req, res, next) {
   //   console.log(message);
   //   fs.writeFileSync("./output.txt");
   // }
-  var log =
+  const log =
     date +
     ": " +
     req.user._json["email"] +
@@ -87,6 +87,7 @@ router.get("/resources", secured(), function(req, res, next) {
   fs.writeFile("output.txt", log, function(err) {
     if (err) return console.log(err);
     console.log(log);
+    console.log('The file has been updated!');
   });
   
   console.log(fs.readFileSync("output.txt").toString())
