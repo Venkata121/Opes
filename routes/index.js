@@ -68,11 +68,11 @@ router.get("/resources", secured(), function(req, res, next) {
     return result;
   }
   const SessionID = randomString(32, "#aA");
-  
+
   // OUTPUT.TXT LOGGING FEATURE
-  
+
   const date = Date.now();
-  
+
   const log =
     date +
     ": " +
@@ -81,7 +81,7 @@ router.get("/resources", secured(), function(req, res, next) {
     req.user._json["https://idkwhythathadtobethere/premium"] +
     ": " +
     SessionID +
-    "\n"    ;
+    "\n";
 
   fs.appendFileSync("output.txt", log, function(err) {
     if (err) return console.log(err);
@@ -91,7 +91,7 @@ router.get("/resources", secured(), function(req, res, next) {
 
   console.log(fs.readFileSync("output.txt").toString());
 
-  
+  // Render Page Now
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
