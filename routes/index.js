@@ -69,12 +69,8 @@ router.get("/resources", secured(), function(req, res, next) {
   }
   const SessionID = randomString(32, "#aA");
 
-  var date = Date.now();
-
-  // function log(message) {
-  //   console.log(message);
-  //   fs.writeFileSync("./output.txt");
-  // }
+  var date = Date.now.toISOString();
+  
   const log =
     date +
     ": " +

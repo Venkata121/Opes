@@ -1,7 +1,7 @@
 # Resource Bank
 
 [![sarthaktexas](https://circleci.com/gh/sarthaktexas/resourcebank.svg?style=svg&circle-token=acf16620d0cd222e6fdf325c847e9eb18eb76ed2)](https://app.circleci.com/pipelines/github/sarthaktexas/resourcebank)
-![OnlineIndicator](https://img.shields.io/website?down_color=lightgrey&down_message=offline&up_color=blue&up_message=online&url=https%3A%2F%2Fshields.io)
+![OnlineIndicator](https://img.shields.io/website?down_color=danger&down_message=offline&up_color=success&up_message=online&url=https%3A%2F%2Frb.sarthakmohanty.me)
 
 ## 🌎 Languages
 
@@ -12,9 +12,6 @@
 
 ![Express](https://img.shields.io/static/v1?label=&message=Express&color=F7DF1E&logo=javascript&logoColor=white&style=for-the-badge)
 ![Node.js](https://img.shields.io/static/v1?label=&message=Node.js&color=339933&logo=node.js&logoColor=white&style=for-the-badge)
-![Jekyll](https://img.shields.io/static/v1?label=&message=Jekyll&color=CC0000&logo=Jekyll&logoColor=white&style=for-the-badge)
-![React](http://img.shields.io/static/v1?label=&message=React&color=46a3bd&logo=react&logoColor=white&style=for-the-badge)
-![Vue](https://img.shields.io/static/v1?label=&message=Vue&color=4FC08D&logo=vue.js&logoColor=white&style=for-the-badge)
 
 ## 🛠 Continous Integration
 
