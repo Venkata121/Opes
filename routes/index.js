@@ -75,16 +75,19 @@ router.get("/resources", secured(), function(req, res, next) {
   //   console.log(message);
   //   fs.writeFileSync("./output.txt");
   // }
-  fs.writeFile('helloworld.txt', 'Hello World!', function (err) {
-  if (err) return console.log(err);
-  console.log(date +
-      ": " +
-      req.user._json["email"] +
-      "-" +
-      req.user._json["https://idkwhythathadtobethere/premium"] +
-      ": " +
-      SessionID);
-});
+  var log =
+    date +
+    ": " +
+    req.user._json["email"] +
+    "-" +
+    req.user._json["https://idkwhythathadtobethere/premium"] +
+    ": " +
+    SessionID;
+
+  fs.writeFile("./output.txt", log, function(err) {
+    if (err) return console.log(err);
+    console.log(log);
+  });
   // log(
   //   date +
   //     ": " +
