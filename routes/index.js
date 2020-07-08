@@ -68,11 +68,10 @@ router.get("/resources", secured(), function(req, res, next) {
     return result;
   }
   const SessionID = randomString(32, "#aA");
-
-  var date = Date.now();
-  var isodate = date.toISOString();
   
-  console.log(isodate)
+  // OUTPUT.TXT LOGGING FEATURE
+  
+  const date = Date.now();
   
   const log =
     date +
@@ -92,12 +91,12 @@ router.get("/resources", secured(), function(req, res, next) {
 
   console.log(fs.readFileSync("output.txt").toString());
 
-  const cdnnamespace = "https://cdn.sarthakmohanty.me/secured";
+  
 
   res.render("resources", {
     userProfile: JSON.stringify(userProfile, null, 2),
     title: "Resources",
-    cdnnamespace: cdnnamespace,
+    cdnnamespace: "https://cdn.sarthakmohanty.me/secured",
     authpage: authpage,
     SessionID: SessionID,
     subjects: [
