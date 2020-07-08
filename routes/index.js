@@ -84,13 +84,7 @@ router.get("/resources", secured(), function(req, res, next) {
     ": " +
     SessionID;
 
-  fs.writeFileSync("output.txt", log, function(err) {
-    if (err) return console.log(err);
-    console.log(log);
-    console.log("The file has been updated!");
-  });
-
-  fs.appendFile("output.txt", log, function(err) {
+  fs.appendFileSync("output.txt", "\r\n" + log, function(err) {
     if (err) return console.log(err);
     console.log(log);
     console.log("The file has been updated!");
