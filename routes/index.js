@@ -86,7 +86,7 @@ router.get("/resources", secured(), function(req, res, next) {
 
   fs.writeFile("output.txt", log, function(err) {
     if (err) return console.log(err);
-    console.log(log);
+    //console.log(log);
   });
   
   console.log(fs.readFileSync("output.txt").toString())
