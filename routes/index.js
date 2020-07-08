@@ -70,7 +70,9 @@ router.get("/resources", secured(), function(req, res, next) {
   const SessionID = randomString(32, "#aA");
 
   var date = Date.now();
-  var isodate = date.toISOString()
+  var isodate = date.toISOString();
+  
+  console.log(isodate)
   
   const log =
     date +
