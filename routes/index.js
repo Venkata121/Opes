@@ -69,7 +69,7 @@ router.get("/resources", secured(), function(req, res, next) {
   }
   const SessionID = randomString(32, "#aA");
 
-  var date = Date.now().toISOString();
+  var date = Date.now();
 
   // function log(message) {
   //   console.log(message);
@@ -87,29 +87,16 @@ router.get("/resources", secured(), function(req, res, next) {
   fs.writeFileSync("output.txt", log, function(err) {
     if (err) return console.log(err);
     console.log(log);
-    console.log('The file has been updated!');
+    console.log("The file has been updated!");
   });
 
-  var stream = fs.createWriteStream("output.txt", { flags: "a" });
-  console.log(log);
-  [...Array(10000)].forEach(function(item, index) {
-    stream.write(index + "\n");
+  fs.appendFile("output.txt", log, function(err) {
+    if (err) return console.log(err);
+    console.log(log);
+    console.log("The file has been updated!");
   });
-  console.log(new Date().toISOString());
-  stream.end();
 
-  
-  console.log(fs.readFileSync("output.txt").toString())
-  
-  // log(
-  //   date +
-  //     ": " +
-  //     req.user._json["email"] +
-  //     "-" +
-  //     req.user._json["https://idkwhythathadtobethere/premium"] +
-  //     ": " +
-  //     SessionID
-  // );
+  console.log(fs.readFileSync("output.txt").toString());
 
   const cdnnamespace = "https://cdn.sarthakmohanty.me/secured";
 
