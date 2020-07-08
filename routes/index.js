@@ -84,7 +84,7 @@ router.get("/resources", secured(), function(req, res, next) {
     ": " +
     SessionID;
 
-  fs.writeFile("./output.txt", log, function(err) {
+  fs.writeFile("output.txt", log, function(err) {
     if (err) return console.log(err);
     console.log(log);
   });
