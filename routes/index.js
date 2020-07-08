@@ -82,9 +82,10 @@ router.get("/resources", secured(), function(req, res, next) {
     "-" +
     req.user._json["https://idkwhythathadtobethere/premium"] +
     ": " +
-    SessionID;
+    SessionID +
+    "\n"    ;
 
-  fs.appendFileSync("output.txt", "\r\n" + log, function(err) {
+  fs.appendFileSync("output.txt", log, function(err) {
     if (err) return console.log(err);
     console.log(log);
     console.log("The file has been updated!");
