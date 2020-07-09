@@ -206,4 +206,11 @@ a.qblink:hover {
  padding: 2px;
 }
 
-.custom
+.customiconbox{
+  
+}
+
+.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
