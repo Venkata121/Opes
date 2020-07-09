@@ -205,12 +205,3 @@ a.qblink:hover {
 .imagepadding {
  padding: 2px;
 }
-
-.customiconbox{
-  
-}
-
-.link-unstyled, .link-unstyled:link, .link-unstyled:hover {
-  color: inherit;
-  text-decoration: inherit;
-}
