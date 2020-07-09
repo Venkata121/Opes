@@ -14,6 +14,7 @@ html
   body
     include resourcesnormal
     include resourcessecured
+    include footer
     .topnav( role="navigation" )
       if locals.user
         h1.topnav.name Sarthak Mohanty
@@ -34,3 +35,4 @@ html
         a(href="https://sarthakmohanty.me/contact" target="_blank") Contact Me
         a(id="qsLoginBtn" href="/login") Log In
     block content
+    +footer
