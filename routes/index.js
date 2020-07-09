@@ -85,11 +85,9 @@ router.get("/resources", secured(), function(req, res, next) {
 
   fs.appendFileSync("output.txt", log, function(err) {
     if (err) return console.log(err);
-    console.log(log);
-    console.log("The file has been updated!");
   });
 
-  console.log(fs.readFileSync("output.txt").toString());
+  console.log(log);
 
   // Render Page Now
 
